@@ -1,0 +1,22 @@
+Begin Function 'Block_entry17_proc'
+
+RTL state condition: (1'b1 == ap_CS_fsm_state1)
+# ST_1
+local size_read <> <integer> <FifoRead> 'read' <>
+reg: size_read_reg_164[31:0] lv
+
+local out_r_read <> <integer> <FifoRead> 'read' <>
+reg: out_r_read_reg_171[63:0] lv
+
+local type_r_read <> <integer> <FifoRead> 'read' <>
+reg: type_r_read_reg_176[31:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state2)
+# ST_2
+
+RTL state condition: (1'b1 == ap_CS_fsm_state4)
+# ST_4
+
+End Function 'Block_entry17_proc'
+

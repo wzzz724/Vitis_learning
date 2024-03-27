@@ -1,0 +1,177 @@
+
+
+================================================================
+== Vitis HLS Report for 'scoring_cosine'
+================================================================
+* Date:           Wed Mar 27 18:58:10 2024
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        krnl_scoring
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  2.342 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +---------------------------------------------------+-----------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                                                   |                                         |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |                      Instance                     |                  Module                 |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +---------------------------------------------------+-----------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |grp_scoring_cosine_Pipeline_VITIS_LOOP_24_1_fu_46  |scoring_cosine_Pipeline_VITIS_LOOP_24_1  |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        +---------------------------------------------------+-----------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|        6|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|      428|      328|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|      212|    -|
+|Register             |        -|     -|      128|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     0|      556|      546|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------------------------------------+-----------------------------------------+---------+----+-----+-----+-----+
+    |                      Instance                     |                  Module                 | BRAM_18K| DSP|  FF | LUT | URAM|
+    +---------------------------------------------------+-----------------------------------------+---------+----+-----+-----+-----+
+    |fdiv_32ns_32ns_32_12_no_dsp_1_U41                  |fdiv_32ns_32ns_32_12_no_dsp_1            |        0|   0|    0|    0|    0|
+    |fsqrt_32ns_32ns_32_12_no_dsp_1_U42                 |fsqrt_32ns_32ns_32_12_no_dsp_1           |        0|   0|    0|    0|    0|
+    |fsqrt_32ns_32ns_32_12_no_dsp_1_U43                 |fsqrt_32ns_32ns_32_12_no_dsp_1           |        0|   0|    0|    0|    0|
+    |grp_scoring_cosine_Pipeline_VITIS_LOOP_24_1_fu_46  |scoring_cosine_Pipeline_VITIS_LOOP_24_1  |        0|   0|  428|  328|    0|
+    +---------------------------------------------------+-----------------------------------------+---------+----+-----+-----+-----+
+    |Total                                              |                                         |        0|   0|  428|  328|    0|
+    +---------------------------------------------------+-----------------------------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------+----------+----+---+----+------------+------------+
+    |   Variable Name   | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------+----------+----+---+----+------------+------------+
+    |ap_ext_blocking_n  |       and|   0|  0|   2|           1|           2|
+    |ap_int_blocking_n  |       and|   0|  0|   2|           1|           2|
+    |ap_str_blocking_n  |       and|   0|  0|   2|           1|           2|
+    +-------------------+----------+----+---+----+------------+------------+
+    |Total              |          |   0|  0|   6|           3|           6|
+    +-------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------+-----+-----------+-----+-----------+
+    |       Name      | LUT | Input Size| Bits| Total Bits|
+    +-----------------+-----+-----------+-----+-----------+
+    |ap_NS_fsm        |  148|         32|    1|         32|
+    |grp_fu_141_ce    |    9|          2|    1|          2|
+    |grp_fu_58_ce     |    9|          2|    1|          2|
+    |grp_fu_58_p0     |   14|          3|   32|         96|
+    |grp_fu_58_p1     |   14|          3|   32|         96|
+    |in1_stream_read  |    9|          2|    1|          2|
+    |in2_stream_read  |    9|          2|    1|          2|
+    +-----------------+-----+-----------+-----+-----------+
+    |Total            |  212|         46|   69|        232|
+    +-----------------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------------------------------+----+----+-----+-----------+
+    |                              Name                              | FF | LUT| Bits| Const Bits|
+    +----------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                       |  31|   0|   31|          0|
+    |grp_scoring_cosine_Pipeline_VITIS_LOOP_24_1_fu_46_ap_start_reg  |   1|   0|    1|          0|
+    |mul8_i_reg_133                                                  |  32|   0|   32|          0|
+    |tmp_1_i_reg_128                                                 |  32|   0|   32|          0|
+    |tmp_i_reg_123                                                   |  32|   0|   32|          0|
+    +----------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                           | 128|   0|  128|          0|
+    +----------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------+-----+-----+------------+----------------+--------------+
+|         RTL Ports         | Dir | Bits|  Protocol  |  Source Object |    C Type    |
++---------------------------+-----+-----+------------+----------------+--------------+
+|ap_clk                     |   in|    1|  ap_ctrl_hs|  scoring_cosine|  return value|
+|ap_rst                     |   in|    1|  ap_ctrl_hs|  scoring_cosine|  return value|
+|ap_start                   |   in|    1|  ap_ctrl_hs|  scoring_cosine|  return value|
+|ap_done                    |  out|    1|  ap_ctrl_hs|  scoring_cosine|  return value|
+|ap_idle                    |  out|    1|  ap_ctrl_hs|  scoring_cosine|  return value|
+|ap_ready                   |  out|    1|  ap_ctrl_hs|  scoring_cosine|  return value|
+|ap_ext_blocking_n          |  out|    1|  ap_ctrl_hs|  scoring_cosine|  return value|
+|ap_str_blocking_n          |  out|    1|  ap_ctrl_hs|  scoring_cosine|  return value|
+|ap_int_blocking_n          |  out|    1|  ap_ctrl_hs|  scoring_cosine|  return value|
+|grp_fu_186_p_din0          |  out|   32|  ap_ctrl_hs|  scoring_cosine|  return value|
+|grp_fu_186_p_din1          |  out|   32|  ap_ctrl_hs|  scoring_cosine|  return value|
+|grp_fu_186_p_opcode        |  out|    2|  ap_ctrl_hs|  scoring_cosine|  return value|
+|grp_fu_186_p_dout0         |   in|   32|  ap_ctrl_hs|  scoring_cosine|  return value|
+|grp_fu_186_p_ce            |  out|    1|  ap_ctrl_hs|  scoring_cosine|  return value|
+|grp_fu_190_p_din0          |  out|   32|  ap_ctrl_hs|  scoring_cosine|  return value|
+|grp_fu_190_p_din1          |  out|   32|  ap_ctrl_hs|  scoring_cosine|  return value|
+|grp_fu_190_p_dout0         |   in|   32|  ap_ctrl_hs|  scoring_cosine|  return value|
+|grp_fu_190_p_ce            |  out|    1|  ap_ctrl_hs|  scoring_cosine|  return value|
+|size                       |   in|   32|     ap_none|            size|        scalar|
+|in1_stream_dout            |   in|   32|     ap_fifo|      in1_stream|       pointer|
+|in1_stream_num_data_valid  |   in|    2|     ap_fifo|      in1_stream|       pointer|
+|in1_stream_fifo_cap        |   in|    2|     ap_fifo|      in1_stream|       pointer|
+|in1_stream_empty_n         |   in|    1|     ap_fifo|      in1_stream|       pointer|
+|in1_stream_read            |  out|    1|     ap_fifo|      in1_stream|       pointer|
+|in2_stream_dout            |   in|   32|     ap_fifo|      in2_stream|       pointer|
+|in2_stream_num_data_valid  |   in|    2|     ap_fifo|      in2_stream|       pointer|
+|in2_stream_fifo_cap        |   in|    2|     ap_fifo|      in2_stream|       pointer|
+|in2_stream_empty_n         |   in|    1|     ap_fifo|      in2_stream|       pointer|
+|in2_stream_read            |  out|    1|     ap_fifo|      in2_stream|       pointer|
+|result                     |  out|   32|      ap_vld|          result|       pointer|
+|result_ap_vld              |  out|    1|      ap_vld|          result|       pointer|
++---------------------------+-----+-----+------------+----------------+--------------+
+

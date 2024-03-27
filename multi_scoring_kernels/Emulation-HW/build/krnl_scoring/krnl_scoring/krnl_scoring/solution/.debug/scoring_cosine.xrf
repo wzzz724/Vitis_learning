@@ -1,0 +1,25 @@
+Begin Function 'scoring_cosine'
+
+RTL state condition: (1'b1 == ap_CS_fsm_state15)
+# ST_15
+local tmp_i <fsqrt_464> <float> <MultiCycle> 'fsqrt' </tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath:464>
+tmp_i /tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath:464
+reg: tmp_i_reg_123[31:0] lv
+
+local tmp_1_i <fsqrt_464> <float> <MultiCycle> 'fsqrt' </tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath:464>
+tmp_1_i /tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath:464
+reg: tmp_1_i_reg_128[31:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state19)
+# ST_19
+local mul8_i <fmul_31> <float> <MultiCycle> 'fmul' </home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:31>
+mul8_i /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:31
+reg: mul8_i_reg_133[31:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state3)
+# ST_3
+
+End Function 'scoring_cosine'
+

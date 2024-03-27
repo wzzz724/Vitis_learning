@@ -1,0 +1,72 @@
+===============================================================================
+Version:    v++ v2022.2 (64-bit)
+Build:      SW Build 3671529 on 2022-10-13-17:52:11
+Copyright:  Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Created:    Wed Mar 27 18:58:28 2024
+===============================================================================
+
+-------------------------------------------------------------------------------
+Design Name:             krnl_scoring
+Target Device:           xilinx:u280:gen3x16_xdma_1:202211.1
+Target Clock:            300.000000MHz
+Total number of kernels: 1
+-------------------------------------------------------------------------------
+
+Kernel Summary
+Kernel Name   Type  Target              OpenCL Library  Compute Units
+------------  ----  ------------------  --------------  -------------
+krnl_scoring  c     fpga0:OCL_REGION_0  krnl_scoring    1
+
+
+-------------------------------------------------------------------------------
+OpenCL Binary:     krnl_scoring
+Kernels mapped to: clc_region
+
+Timing Information (MHz)
+Compute Unit    Kernel Name   Module Name                               Target Frequency  Estimated Frequency
+--------------  ------------  ----------------------------------------  ----------------  -------------------
+krnl_scoring_1  krnl_scoring  entry_proc                                300.300293        821.692688
+krnl_scoring_1  krnl_scoring  load_input_Pipeline_mem_rd                300.300293        411.015198
+krnl_scoring_1  krnl_scoring  load_input                                300.300293        411.015198
+krnl_scoring_1  krnl_scoring  load_input_1_Pipeline_mem_rd              300.300293        411.015198
+krnl_scoring_1  krnl_scoring  load_input_1                              300.300293        411.015198
+krnl_scoring_1  krnl_scoring  scoring_euclidean                         300.300293        426.985474
+krnl_scoring_1  krnl_scoring  scoring_cosine_Pipeline_VITIS_LOOP_24_1   300.300293        426.985474
+krnl_scoring_1  krnl_scoring  scoring_cosine                            300.300293        426.985474
+krnl_scoring_1  krnl_scoring  scoring_product_Pipeline_VITIS_LOOP_15_1  300.300293        426.985474
+krnl_scoring_1  krnl_scoring  scoring_product                           300.300293        426.985474
+krnl_scoring_1  krnl_scoring  Block_entry17_proc                        300.300293        411.015198
+krnl_scoring_1  krnl_scoring  krnl_scoring                              300.300293        411.015198
+
+Latency Information
+Compute Unit    Kernel Name   Module Name                               Start Interval  Best (cycles)  Avg (cycles)  Worst (cycles)  Best (absolute)  Avg (absolute)  Worst (absolute)
+--------------  ------------  ----------------------------------------  --------------  -------------  ------------  --------------  ---------------  --------------  ----------------
+krnl_scoring_1  krnl_scoring  entry_proc                                0               0              0             0               0 ns             0 ns            0 ns
+krnl_scoring_1  krnl_scoring  load_input_Pipeline_mem_rd                undef           undef          undef         undef           undef            undef           undef
+krnl_scoring_1  krnl_scoring  load_input                                undef           undef          undef         undef           undef            undef           undef
+krnl_scoring_1  krnl_scoring  load_input_1_Pipeline_mem_rd              undef           undef          undef         undef           undef            undef           undef
+krnl_scoring_1  krnl_scoring  load_input_1                              undef           undef          undef         undef           undef            undef           undef
+krnl_scoring_1  krnl_scoring  scoring_euclidean                         undef           undef          undef         undef           undef            undef           undef
+krnl_scoring_1  krnl_scoring  scoring_cosine_Pipeline_VITIS_LOOP_24_1   undef           undef          undef         undef           undef            undef           undef
+krnl_scoring_1  krnl_scoring  scoring_cosine                            undef           undef          undef         undef           undef            undef           undef
+krnl_scoring_1  krnl_scoring  scoring_product_Pipeline_VITIS_LOOP_15_1  15 ~ -1         15             undef         undef           49.995 ns        undef           undef
+krnl_scoring_1  krnl_scoring  scoring_product                           1 ~ -1          1              undef         undef           3.333 ns         undef           undef
+krnl_scoring_1  krnl_scoring  Block_entry17_proc                        undef           undef          undef         undef           undef            undef           undef
+krnl_scoring_1  krnl_scoring  krnl_scoring                              undef           undef          undef         undef           undef            undef           undef
+
+Area Information
+Compute Unit    Kernel Name   Module Name                               FF    LUT   DSP  BRAM  URAM
+--------------  ------------  ----------------------------------------  ----  ----  ---  ----  ----
+krnl_scoring_1  krnl_scoring  entry_proc                                3     46    0    0     0
+krnl_scoring_1  krnl_scoring  load_input_Pipeline_mem_rd                69    126   0    0     0
+krnl_scoring_1  krnl_scoring  load_input                                237   695   0    0     0
+krnl_scoring_1  krnl_scoring  load_input_1_Pipeline_mem_rd              69    126   0    0     0
+krnl_scoring_1  krnl_scoring  load_input_1                              237   684   0    0     0
+krnl_scoring_1  krnl_scoring  scoring_euclidean                         707   558   0    0     0
+krnl_scoring_1  krnl_scoring  scoring_cosine_Pipeline_VITIS_LOOP_24_1   428   328   0    0     0
+krnl_scoring_1  krnl_scoring  scoring_cosine                            556   546   0    0     0
+krnl_scoring_1  krnl_scoring  scoring_product_Pipeline_VITIS_LOOP_15_1  233   193   0    0     0
+krnl_scoring_1  krnl_scoring  scoring_product                           269   284   0    0     0
+krnl_scoring_1  krnl_scoring  Block_entry17_proc                        2230  2219  0    0     0
+krnl_scoring_1  krnl_scoring  krnl_scoring                              4780  6675  0    0     0
+-------------------------------------------------------------------------------

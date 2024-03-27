@@ -1,0 +1,66 @@
+===============================================================================
+Version:    v++ v2022.2 (64-bit)
+Build:      SW Build 3671529 on 2022-10-13-17:52:11
+Copyright:  Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Created:    Mon Mar 25 16:56:10 2024
+===============================================================================
+
+-------------------------------------------------------------------------------
+Design Name:             krnl_vadd
+Target Device:           xilinx:u280:gen3x16_xdma_1:202211.1
+Target Clock:            300.000000MHz
+Total number of kernels: 1
+-------------------------------------------------------------------------------
+
+Kernel Summary
+Kernel Name  Type  Target              OpenCL Library  Compute Units
+-----------  ----  ------------------  --------------  -------------
+krnl_vadd    c     fpga0:OCL_REGION_0  krnl_vadd       1
+
+
+-------------------------------------------------------------------------------
+OpenCL Binary:     krnl_vadd
+Kernels mapped to: clc_region
+
+Timing Information (MHz)
+Compute Unit  Kernel Name  Module Name                   Target Frequency  Estimated Frequency
+------------  -----------  ----------------------------  ----------------  -------------------
+krnl_vadd_1   krnl_vadd    entry_proc                    300.300293        821.692688
+krnl_vadd_1   krnl_vadd    load_input_Pipeline_mem_rd    300.300293        411.015198
+krnl_vadd_1   krnl_vadd    load_input                    300.300293        411.015198
+krnl_vadd_1   krnl_vadd    load_input_1_Pipeline_mem_rd  300.300293        411.015198
+krnl_vadd_1   krnl_vadd    load_input_1                  300.300293        411.015198
+krnl_vadd_1   krnl_vadd    compute_add_Pipeline_execute  300.300293        476.871735
+krnl_vadd_1   krnl_vadd    compute_add                   300.300293        411.015198
+krnl_vadd_1   krnl_vadd    store_result_Pipeline_mem_wr  300.300293        411.015198
+krnl_vadd_1   krnl_vadd    store_result                  300.300293        411.015198
+krnl_vadd_1   krnl_vadd    krnl_vadd                     300.300293        411.015198
+
+Latency Information
+Compute Unit  Kernel Name  Module Name                   Start Interval  Best (cycles)  Avg (cycles)  Worst (cycles)  Best (absolute)  Avg (absolute)  Worst (absolute)
+------------  -----------  ----------------------------  --------------  -------------  ------------  --------------  ---------------  --------------  ----------------
+krnl_vadd_1   krnl_vadd    entry_proc                    0               0              0             0               0 ns             0 ns            0 ns
+krnl_vadd_1   krnl_vadd    load_input_Pipeline_mem_rd    4099            4099           4099          4099            13.662 us        13.662 us       13.662 us
+krnl_vadd_1   krnl_vadd    load_input                    4171            4171           4171          4171            13.902 us        13.902 us       13.902 us
+krnl_vadd_1   krnl_vadd    load_input_1_Pipeline_mem_rd  4099            4099           4099          4099            13.662 us        13.662 us       13.662 us
+krnl_vadd_1   krnl_vadd    load_input_1                  4171            4171           4171          4171            13.902 us        13.902 us       13.902 us
+krnl_vadd_1   krnl_vadd    compute_add_Pipeline_execute  4099            4099           4099          4099            13.662 us        13.662 us       13.662 us
+krnl_vadd_1   krnl_vadd    compute_add                   4101            4101           4101          4101            13.669 us        13.669 us       13.669 us
+krnl_vadd_1   krnl_vadd    store_result_Pipeline_mem_wr  4099            4099           4099          4099            13.662 us        13.662 us       13.662 us
+krnl_vadd_1   krnl_vadd    store_result                  4170            4170           4170          4170            13.899 us        13.899 us       13.899 us
+krnl_vadd_1   krnl_vadd    krnl_vadd                     4172            4243           4243          4243            14.142 us        14.142 us       14.142 us
+
+Area Information
+Compute Unit  Kernel Name  Module Name                   FF    LUT   DSP  BRAM  URAM
+------------  -----------  ----------------------------  ----  ----  ---  ----  ----
+krnl_vadd_1   krnl_vadd    entry_proc                    3     29    0    0     0
+krnl_vadd_1   krnl_vadd    load_input_Pipeline_mem_rd    69    118   0    0     0
+krnl_vadd_1   krnl_vadd    load_input                    238   686   0    0     0
+krnl_vadd_1   krnl_vadd    load_input_1_Pipeline_mem_rd  69    118   0    0     0
+krnl_vadd_1   krnl_vadd    load_input_1                  237   668   0    0     0
+krnl_vadd_1   krnl_vadd    compute_add_Pipeline_execute  68    166   0    0     0
+krnl_vadd_1   krnl_vadd    compute_add                   105   242   0    0     0
+krnl_vadd_1   krnl_vadd    store_result_Pipeline_mem_wr  69    120   0    0     0
+krnl_vadd_1   krnl_vadd    store_result                  268   704   0    0     0
+krnl_vadd_1   krnl_vadd    krnl_vadd                     3014  5338  0    0     0
+-------------------------------------------------------------------------------

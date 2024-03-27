@@ -1,0 +1,238 @@
+<ENTRY>
+{
+ "thisFile": "/home/cnic/wz/workspace/example_kernels/Emulation-HW/build/krnl_vadd.xo.compile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Mon Mar 25 16:41:18 2024",
+ "timestampMillis": "1711356078188",
+ "buildStep": {
+  "cmdId": "39e008a2-f1e5-4ce3-ae6a-5c0a7d139b73",
+  "name": "v++",
+  "logFile": "/home/cnic/wz/workspace/example_kernels/Emulation-HW/build/krnl_vadd/krnl_vadd.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2022.2/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" --target hw_emu --compile -I../src --config krnl_vadd-compile.cfg -obuild/krnl_vadd.xo ../src/krnl_vadd.cpp ",
+  "args": [
+   "--target",
+   "hw_emu",
+   "--compile",
+   "-I../src",
+   "--config",
+   "krnl_vadd-compile.cfg",
+   "-obuild/krnl_vadd.xo",
+   "../src/krnl_vadd.cpp"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/cnic/wz/workspace/example_kernels/Emulation-HW/krnl_vadd-compile.cfg",
+    "content": "platform=xilinx_u280_gen3x16_xdma_1_202211_1\nsave-temps=1\nkernel=krnl_vadd\ndebug=1\nmessageDb=build/krnl_vadd.mdb\ntemp_dir=build\nreport_dir=build/reports\nlog_dir=build/logs\n\n[advanced]\nmisc=solution_name=krnl_vadd"
+   }
+  ],
+  "cwd": "/home/cnic/wz/workspace/example_kernels/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Mar 25 16:41:18 2024",
+ "timestampMillis": "1711356078188",
+ "status": {
+  "cmdId": "39e008a2-f1e5-4ce3-ae6a-5c0a7d139b73",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Mon Mar 25 16:41:21 2024",
+ "timestampMillis": "1711356081115",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_u280_gen3x16_xdma_1_202211_1.xpfm",
+  "hardwareDsa": "",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_COMPILE",
+  "target": "TT_HW_EMU",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "krnl_vadd",
+     "file": "/home/cnic/wz/workspace/example_kernels/Emulation-HW/build/krnl_vadd.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/cnic/wz/workspace/example_kernels/src/krnl_vadd.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2022.2. SW Build 3671529 on 2022-10-13-17:52:11"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Mon Mar 25 16:41:21 2024",
+ "timestampMillis": "1711356081117",
+ "buildStep": {
+  "cmdId": "95cb1f08-d541-48ea-8010-0731a759bbe5",
+  "name": "vitis_hls",
+  "logFile": "/home/cnic/wz/workspace/example_kernels/Emulation-HW/build/krnl_vadd/krnl_vadd/vitis_hls.log",
+  "commandLine": "vitis_hls -f /home/cnic/wz/workspace/example_kernels/Emulation-HW/build/krnl_vadd/krnl_vadd/krnl_vadd.tcl -messageDb vitis_hls.pb",
+  "args": [
+   "vitis_hls",
+   "-f",
+   "/home/cnic/wz/workspace/example_kernels/Emulation-HW/build/krnl_vadd/krnl_vadd/krnl_vadd.tcl",
+   "-messageDb",
+   "vitis_hls.pb"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/cnic/wz/workspace/example_kernels/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Mar 25 16:41:21 2024",
+ "timestampMillis": "1711356081117",
+ "status": {
+  "cmdId": "95cb1f08-d541-48ea-8010-0731a759bbe5",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Mar 25 16:41:45 2024",
+ "timestampMillis": "1711356105299",
+ "status": {
+  "cmdId": "95cb1f08-d541-48ea-8010-0731a759bbe5",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Mar 25 16:41:45 2024",
+ "timestampMillis": "1711356105306",
+ "report": {
+  "path": "/home/cnic/wz/workspace/example_kernels/Emulation-HW/build/krnl_vadd/krnl_vadd/krnl_vadd/solution/.autopilot/db/krnl_vadd.design.xml",
+  "name": "krnl_vadd",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_REPORT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Mar 25 16:41:45 2024",
+ "timestampMillis": "1711356105306",
+ "report": {
+  "path": "/home/cnic/wz/workspace/example_kernels/Emulation-HW/build/krnl_vadd/krnl_vadd/krnl_vadd/solution/.autopilot/db/.message_syn.xml",
+  "name": "krnl_vadd",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_DRC_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Mar 25 16:41:45 2024",
+ "timestampMillis": "1711356105307",
+ "report": {
+  "path": "/home/cnic/wz/workspace/example_kernels/Emulation-HW/build/reports/krnl_vadd/hls_reports/krnl_vadd_csynth.rpt",
+  "name": "krnl_vadd",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_HLS_CSYNTH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Mar 25 16:41:45 2024",
+ "timestampMillis": "1711356105307",
+ "report": {
+  "path": "/home/cnic/wz/workspace/example_kernels/Emulation-HW/build/krnl_vadd/krnl_vadd/krnl_vadd/solution/syn/report/krnl_vadd_csynth.xml",
+  "name": "krnl_vadd",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_CSYNTH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Mar 25 16:41:45 2024",
+ "timestampMillis": "1711356105312",
+ "report": {
+  "path": "/home/cnic/wz/workspace/example_kernels/Emulation-HW/build/reports/krnl_vadd/system_estimate_krnl_vadd.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Mar 25 16:41:45 2024",
+ "timestampMillis": "1711356105362",
+ "status": {
+  "cmdId": "39e008a2-f1e5-4ce3-ae6a-5c0a7d139b73",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Mar 25 16:41:45 2024",
+ "timestampMillis": "1711356105403",
+ "report": {
+  "path": "/home/cnic/wz/workspace/example_kernels/Emulation-HW/build/reports/krnl_vadd/krnl_vadd_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Mar 25 16:41:45 2024",
+ "timestampMillis": "1711356105403",
+ "report": {
+  "path": "/home/cnic/wz/workspace/example_kernels/Emulation-HW/build/krnl_vadd_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

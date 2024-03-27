@@ -1,0 +1,26 @@
+INFO: [v++ 60-1306] Additional information associated with this v++ compile can be found at:
+	Reports: /home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/reports/krnl_scoring
+	Log files: /home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/logs/krnl_scoring
+INFO: [v++ 60-1548] Creating build summary session with primary output /home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/krnl_scoring.xo.compile_summary, at Wed Mar 27 18:55:16 2024
+INFO: [v++ 60-1315] Creating rulecheck session with output '/home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/reports/krnl_scoring/krnl_scoring_guidance.html', at Wed Mar 27 18:55:16 2024
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/hw/hw.xsa'
+INFO: [v++ 74-78] Compiler Version string: 2022.2
+INFO: [v++ 60-585] Compiling for hardware emulation target
+INFO: [v++ 60-423]   Target device: xilinx_u280_gen3x16_xdma_1_202211_1
+INFO: [v++ 60-242] Creating kernel: 'krnl_scoring'
+
+===>The following messages were generated while  performing high-level synthesis for kernel: krnl_scoring Log file: /home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/krnl_scoring/krnl_scoring/vitis_hls.log :
+ERROR: [v++ 200-1013] Bundled bus interface gmem failed dataflow checking: it cannot read data in multiple processes.
+ERROR: [v++ 200-984] Bundled bus interface gmem has read operations in function:  'load_input' (/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:7:5) and 'load_input.1' (/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:7:5).
+
+ERROR: [v++ 200-1715] Encountered problem during source synthesis
+ERROR: [v++ 200-70] Pre-synthesis failed.
+ERROR: [v++ 60-300] Failed to build kernel(ip) krnl_scoring, see log for details: /home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/krnl_scoring/krnl_scoring/vitis_hls.log
+ERROR: [v++ 60-773] In '/home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/krnl_scoring/krnl_scoring/vitis_hls.log', caught Tcl error: ERROR: [HLS 200-1013] Bundled bus interface gmem failed dataflow checking: it cannot read data in multiple processes.
+ERROR: [v++ 60-773] In '/home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/krnl_scoring/krnl_scoring/vitis_hls.log', caught Tcl error: ERROR: [HLS 200-984] Bundled bus interface gmem has read operations in function:  'load_input' (/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:7:5) and 'load_input.1' (/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:7:5).
+ERROR: [v++ 60-773] In '/home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/krnl_scoring/krnl_scoring/vitis_hls.log', caught Tcl error: ERROR: [HLS 200-1715] Encountered problem during source synthesis
+ERROR: [v++ 60-773] In '/home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/krnl_scoring/krnl_scoring/vitis_hls.log', caught Tcl error: ERROR: [HLS 200-70] Pre-synthesis failed.
+ERROR: [v++ 60-599] Kernel compilation failed to complete
+ERROR: [v++ 60-592] Failed to finish compilation
+INFO: [v++ 60-1653] Closing dispatch client.

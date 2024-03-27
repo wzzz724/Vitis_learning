@@ -1,0 +1,441 @@
+
+*** Running vitis_hls
+    with args -f krnl_scoring.tcl -messageDb vitis_hls.pb
+
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+  **** SW Build 3670227 on Oct 13 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source /tools/Xilinx/Vitis_HLS/2022.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'cnic' on host 'ts02' (Linux_x86_64 version 5.15.0-101-generic) on Wed Mar 27 18:58:03 CST 2024
+INFO: [HLS 200-10] On os Ubuntu 20.04.6 LTS
+INFO: [HLS 200-10] In directory '/home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/krnl_scoring/krnl_scoring'
+Sourcing Tcl script 'krnl_scoring.tcl'
+INFO: [HLS 200-1510] Running: open_project krnl_scoring 
+INFO: [HLS 200-10] Creating and opening project '/home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/krnl_scoring/krnl_scoring/krnl_scoring'.
+INFO: [HLS 200-1510] Running: set_top krnl_scoring 
+INFO: [HLS 200-1510] Running: add_files /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp -cflags  -g -I /home/cnic/wz/workspace/multi_scoring_kernels/src 
+INFO: [HLS 200-10] Adding design file '/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution -flow_target vitis solution 
+INFO: [HLS 200-10] Creating and opening solution '/home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/krnl_scoring/krnl_scoring/krnl_scoring/solution'.
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_latency=64
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_rtl -register_reset_num=3
+INFO: [HLS 200-1510] Running: set_part xcu280-fsvh2892-2L-e 
+INFO: [HLS 200-1611] Setting target device to 'xcu280-fsvh2892-2L-e'
+INFO: [HLS 200-1510] Running: create_clock -period 300.000000MHz -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.333ns.
+INFO: [HLS 200-1510] Running: config_rtl -kernel_profile 
+INFO: [HLS 200-1510] Running: config_dataflow -strict_mode warning 
+INFO: [HLS 200-1510] Running: config_debug -enable 
+INFO: [HLS 200-1510] Running: config_export -deadlock_detection sim 
+WARNING: [HLS 200-483] The 'config_export -deadlock_detection' command is deprecated and will be removed in a future release. Use 'config_rtl -deadlock_detection' as its replacement.
+INFO: [HLS 200-1907] Replacing 'config_export -deadlock_detection=sim' with 'config_rtl -deadlock_detection=sim' in current solution file
+INFO: [HLS 200-1510] Running: config_interface -m_axi_conservative_mode=1 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_addr64 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_auto_max_ports=0 
+INFO: [HLS 200-1510] Running: config_export -format xo -ipname krnl_scoring 
+INFO: [HLS 200-1907] Replacing 'config_export -deadlock_detection=sim' with 'config_rtl -deadlock_detection=sim' in current solution file
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.072 GB.
+INFO: [HLS 200-10] Analyzing design file '/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp' ... 
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:53:9)
+Resolution: For help on HLS 214-114 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-114.html
+WARNING: [HLS 200-471] Dataflow form checks found 1 issue(s) in file /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp
+Resolution: For help on HLS 200-471 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-471.html
+WARNING: [HLS 207-5292] unused parameter 'out_stream' (/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:14:106)
+WARNING: [HLS 207-5292] unused parameter 'out_stream' (/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:20:105)
+WARNING: [HLS 207-5292] unused parameter 'out_stream' (/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:34:108)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.29 seconds. CPU system time: 0.23 seconds. Elapsed time: 0.52 seconds; current allocated memory: 1.074 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vitis' flow target.
+INFO: [HLS 214-178] Inlining function 'std::sqrt(float)' into 'scoring_cosine(hls::stream<float, 0>&, hls::stream<float, 0>&, hls::stream<float, 0>&, int)' (/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:20:0)
+INFO: [HLS 214-178] Inlining function 'std::sqrt(float)' into 'scoring_euclidean(hls::stream<float, 0>&, hls::stream<float, 0>&, hls::stream<float, 0>&, int)' (/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:34:0)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 32 in loop 'mem_rd'(/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:9:5) has been inferred on bundle 'gmem0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:9:5)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 32 in loop 'mem_rd'(/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:9:5) has been inferred on bundle 'gmem1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:9:5)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2.04 seconds. CPU system time: 0.35 seconds. Elapsed time: 2.39 seconds; current allocated memory: 1.075 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.075 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.075 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.075 GB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_15_1' (/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:15) in function 'scoring_product' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_36_1' (/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:35) in function 'scoring_euclidean' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_24_1' (/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:21) in function 'scoring_cosine' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'mem_rd' (/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:9) in function 'load_input.1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'mem_rd' (/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:9) in function 'load_input' automatically.
+WARNING: [HLS 200-805] An internal stream 'in2_stream' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'in1_stream' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+INFO: [XFORM 203-712] Applying dataflow to function 'krnl_scoring' (/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:45), detected/extracted 4 process function(s): 
+	 'entry_proc'
+	 'load_input'
+	 'load_input.1'
+	 'Block_entry17_proc'.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.097 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.06 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.191 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'krnl_scoring' ...
+WARNING: [SYN 201-103] Legalizing function name 'load_input.1_Pipeline_mem_rd' to 'load_input_1_Pipeline_mem_rd'.
+WARNING: [SYN 201-103] Legalizing function name 'load_input.1' to 'load_input_1'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'entry_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.192 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.192 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load_input_Pipeline_mem_rd' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'mem_rd'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'mem_rd'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.193 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.193 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load_input' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.193 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.15 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.193 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load_input_1_Pipeline_mem_rd' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'mem_rd'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'mem_rd'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.194 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.194 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load_input_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.194 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 1.194 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'scoring_euclidean' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_36_1'.
+WARNING: [HLS 200-880] The II Violation in module 'scoring_euclidean' (loop 'VITIS_LOOP_36_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('sum_write_ln36', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:36) of variable 'sum', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:38 on local variable '__x' and 'load' operation ('sum_load', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:38) on local variable '__x'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'scoring_euclidean' (loop 'VITIS_LOOP_36_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('sum_write_ln36', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:36) of variable 'sum', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:38 on local variable '__x' and 'load' operation ('sum_load', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:38) on local variable '__x'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'scoring_euclidean' (loop 'VITIS_LOOP_36_1'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('sum_write_ln36', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:36) of variable 'sum', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:38 on local variable '__x' and 'load' operation ('sum_load', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:38) on local variable '__x'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'scoring_euclidean' (loop 'VITIS_LOOP_36_1'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0) between 'store' operation ('sum_write_ln36', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:36) of variable 'sum', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:38 on local variable '__x' and 'load' operation ('sum_load', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:38) on local variable '__x'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'scoring_euclidean' (loop 'VITIS_LOOP_36_1'): Unable to enforce a carried dependence constraint (II = 5, distance = 1, offset = 0) between 'store' operation ('sum_write_ln36', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:36) of variable 'sum', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:38 on local variable '__x' and 'load' operation ('sum_load', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:38) on local variable '__x'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'scoring_euclidean' (loop 'VITIS_LOOP_36_1'): Unable to enforce a carried dependence constraint (II = 6, distance = 1, offset = 0) between 'store' operation ('sum_write_ln36', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:36) of variable 'sum', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:38 on local variable '__x' and 'load' operation ('sum_load', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:38) on local variable '__x'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 7, Depth = 21, loop 'VITIS_LOOP_36_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.195 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.195 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'scoring_cosine_Pipeline_VITIS_LOOP_24_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_24_1'.
+WARNING: [HLS 200-880] The II Violation in module 'scoring_cosine_Pipeline_VITIS_LOOP_24_1' (loop 'VITIS_LOOP_24_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('dot_product_write_ln24', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:24) of variable 'dot_product', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:27 on local variable 'dot_product' and 'load' operation ('dot_product_load', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:27) on local variable 'dot_product'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'scoring_cosine_Pipeline_VITIS_LOOP_24_1' (loop 'VITIS_LOOP_24_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('dot_product_write_ln24', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:24) of variable 'dot_product', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:27 on local variable 'dot_product' and 'load' operation ('dot_product_load', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:27) on local variable 'dot_product'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'scoring_cosine_Pipeline_VITIS_LOOP_24_1' (loop 'VITIS_LOOP_24_1'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('dot_product_write_ln24', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:24) of variable 'dot_product', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:27 on local variable 'dot_product' and 'load' operation ('dot_product_load', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:27) on local variable 'dot_product'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'scoring_cosine_Pipeline_VITIS_LOOP_24_1' (loop 'VITIS_LOOP_24_1'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0) between 'store' operation ('dot_product_write_ln24', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:24) of variable 'dot_product', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:27 on local variable 'dot_product' and 'load' operation ('dot_product_load', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:27) on local variable 'dot_product'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'scoring_cosine_Pipeline_VITIS_LOOP_24_1' (loop 'VITIS_LOOP_24_1'): Unable to enforce a carried dependence constraint (II = 5, distance = 1, offset = 0) between 'store' operation ('dot_product_write_ln24', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:24) of variable 'dot_product', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:27 on local variable 'dot_product' and 'load' operation ('dot_product_load', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:27) on local variable 'dot_product'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'scoring_cosine_Pipeline_VITIS_LOOP_24_1' (loop 'VITIS_LOOP_24_1'): Unable to enforce a carried dependence constraint (II = 6, distance = 1, offset = 0) between 'store' operation ('dot_product_write_ln24', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:24) of variable 'dot_product', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:27 on local variable 'dot_product' and 'load' operation ('dot_product_load', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:27) on local variable 'dot_product'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 7, Depth = 16, loop 'VITIS_LOOP_24_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.195 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.195 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'scoring_cosine' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.196 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.196 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'scoring_product_Pipeline_VITIS_LOOP_15_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_15_1'.
+WARNING: [HLS 200-880] The II Violation in module 'scoring_product_Pipeline_VITIS_LOOP_15_1' (loop 'VITIS_LOOP_15_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('add5_i_write_ln15', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:15) of variable 'add_i', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:16 on local variable 'add5_i' and 'load' operation ('add5_i_load', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:16) on local variable 'add5_i'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'scoring_product_Pipeline_VITIS_LOOP_15_1' (loop 'VITIS_LOOP_15_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('add5_i_write_ln15', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:15) of variable 'add_i', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:16 on local variable 'add5_i' and 'load' operation ('add5_i_load', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:16) on local variable 'add5_i'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'scoring_product_Pipeline_VITIS_LOOP_15_1' (loop 'VITIS_LOOP_15_1'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('add5_i_write_ln15', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:15) of variable 'add_i', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:16 on local variable 'add5_i' and 'load' operation ('add5_i_load', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:16) on local variable 'add5_i'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'scoring_product_Pipeline_VITIS_LOOP_15_1' (loop 'VITIS_LOOP_15_1'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0) between 'store' operation ('add5_i_write_ln15', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:15) of variable 'add_i', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:16 on local variable 'add5_i' and 'load' operation ('add5_i_load', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:16) on local variable 'add5_i'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'scoring_product_Pipeline_VITIS_LOOP_15_1' (loop 'VITIS_LOOP_15_1'): Unable to enforce a carried dependence constraint (II = 5, distance = 1, offset = 0) between 'store' operation ('add5_i_write_ln15', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:15) of variable 'add_i', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:16 on local variable 'add5_i' and 'load' operation ('add5_i_load', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:16) on local variable 'add5_i'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'scoring_product_Pipeline_VITIS_LOOP_15_1' (loop 'VITIS_LOOP_15_1'): Unable to enforce a carried dependence constraint (II = 6, distance = 1, offset = 0) between 'store' operation ('add5_i_write_ln15', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:15) of variable 'add_i', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:16 on local variable 'add5_i' and 'load' operation ('add5_i_load', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:16) on local variable 'add5_i'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 7, Depth = 14, loop 'VITIS_LOOP_15_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.196 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.196 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'scoring_product' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.197 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.197 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_entry17_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.197 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 1.197 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'krnl_scoring' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.197 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.197 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'entry_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'entry_proc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.197 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'load_input_Pipeline_mem_rd' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'load_input_Pipeline_mem_rd' pipeline 'mem_rd' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_input_Pipeline_mem_rd/m_axi_gmem0_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_input_Pipeline_mem_rd/m_axi_gmem0_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_input_Pipeline_mem_rd/m_axi_gmem0_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_input_Pipeline_mem_rd/m_axi_gmem0_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_input_Pipeline_mem_rd/m_axi_gmem0_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_input_Pipeline_mem_rd/m_axi_gmem0_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_input_Pipeline_mem_rd/m_axi_gmem0_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_input_Pipeline_mem_rd/m_axi_gmem0_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_input_Pipeline_mem_rd/m_axi_gmem0_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_input_Pipeline_mem_rd/m_axi_gmem0_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_input_Pipeline_mem_rd/m_axi_gmem0_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_input_Pipeline_mem_rd/m_axi_gmem0_ARUSER' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'load_input_Pipeline_mem_rd'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.198 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'load_input' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'load_input'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.200 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'load_input_1_Pipeline_mem_rd' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'load_input_1_Pipeline_mem_rd' pipeline 'mem_rd' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_input_1_Pipeline_mem_rd/m_axi_gmem1_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_input_1_Pipeline_mem_rd/m_axi_gmem1_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_input_1_Pipeline_mem_rd/m_axi_gmem1_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_input_1_Pipeline_mem_rd/m_axi_gmem1_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_input_1_Pipeline_mem_rd/m_axi_gmem1_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_input_1_Pipeline_mem_rd/m_axi_gmem1_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_input_1_Pipeline_mem_rd/m_axi_gmem1_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_input_1_Pipeline_mem_rd/m_axi_gmem1_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_input_1_Pipeline_mem_rd/m_axi_gmem1_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_input_1_Pipeline_mem_rd/m_axi_gmem1_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_input_1_Pipeline_mem_rd/m_axi_gmem1_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_input_1_Pipeline_mem_rd/m_axi_gmem1_ARUSER' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'load_input_1_Pipeline_mem_rd'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.201 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'load_input_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'load_input_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.202 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'scoring_euclidean' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_7_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fsqrt_32ns_32ns_32_12_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'scoring_euclidean'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.204 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'scoring_cosine_Pipeline_VITIS_LOOP_24_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'scoring_cosine_Pipeline_VITIS_LOOP_24_1' pipeline 'VITIS_LOOP_24_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_7_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'scoring_cosine_Pipeline_VITIS_LOOP_24_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.205 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'scoring_cosine' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Setting dangling out port 'scoring_cosine/grp_fu_186_p_opcode' to 0.
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_7_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_12_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fsqrt_32ns_32ns_32_12_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'scoring_cosine'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.206 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'scoring_product_Pipeline_VITIS_LOOP_15_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'scoring_product_Pipeline_VITIS_LOOP_15_1' pipeline 'VITIS_LOOP_15_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_7_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'scoring_product_Pipeline_VITIS_LOOP_15_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.207 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'scoring_product' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Setting dangling out port 'scoring_product/grp_fu_186_p_opcode' to 0.
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_7_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'scoring_product'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.208 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Block_entry17_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'result' is power-on initialization.
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_7_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Block_entry17_proc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.210 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'krnl_scoring' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'krnl_scoring/gmem0' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'krnl_scoring/gmem1' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'krnl_scoring/type_r' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'krnl_scoring/in1' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'krnl_scoring/in2' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'krnl_scoring/out_r' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'krnl_scoring/size' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'krnl_scoring' to 's_axilite & ap_ctrl_chain'.
+INFO: [RTGEN 206-100] Bundling port 'type_r', 'in1', 'in2', 'out_r', 'size' and 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'krnl_scoring'.
+INFO: [RTMG 210-285] Implementing FIFO 'type_r_c_U(krnl_scoring_fifo_w32_d3_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'out_r_c_U(krnl_scoring_fifo_w64_d3_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'size_c_U(krnl_scoring_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'in1_stream_U(krnl_scoring_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'in2_stream_U(krnl_scoring_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_Block_entry17_proc_U0_U(krnl_scoring_start_for_Block_entry17_proc_U0)' using Shift Registers.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.15 seconds; current allocated memory: 1.213 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.35 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.37 seconds; current allocated memory: 1.216 GB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.51 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.53 seconds; current allocated memory: 1.224 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for krnl_scoring.
+INFO: [VLOG 209-307] Generating Verilog RTL for krnl_scoring.
+INFO: [HLS 200-789] **** Estimated Fmax: 411.00 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 5.72 seconds. CPU system time: 0.75 seconds. Elapsed time: 6.51 seconds; current allocated memory: 155.066 MB.
+INFO: [HLS 200-1510] Running: export_design 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.2/data/ip'.
+WARNING: [IP_Flow 19-4832] The IP name 'krnl_scoring_fadd_32ns_32ns_32_7_full_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'krnl_scoring_fadd_32ns_32ns_32_7_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'krnl_scoring_fadd_32ns_32ns_32_7_full_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'krnl_scoring_faddfsub_32ns_32ns_32_7_full_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'krnl_scoring_faddfsub_32ns_32ns_32_7_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'krnl_scoring_faddfsub_32ns_32ns_32_7_full_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'krnl_scoring_fdiv_32ns_32ns_32_12_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'krnl_scoring_fdiv_32ns_32ns_32_12_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'krnl_scoring_fdiv_32ns_32ns_32_12_no_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'krnl_scoring_fmul_32ns_32ns_32_4_max_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'krnl_scoring_fmul_32ns_32ns_32_4_max_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'krnl_scoring_fmul_32ns_32ns_32_4_max_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'krnl_scoring_fsqrt_32ns_32ns_32_12_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'krnl_scoring_fsqrt_32ns_32ns_32_12_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'krnl_scoring_fsqrt_32ns_32ns_32_12_no_dsp_1_ip'...
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.2/data/ip'.
+Running package_xo -xo_path /home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/krnl_scoring/krnl_scoring/krnl_scoring/solution/impl/export.xo -kernel_name krnl_scoring -kernel_xml /home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/krnl_scoring/krnl_scoring/krnl_scoring/solution/impl/ip/../kernel/kernel.xml -kernel_files /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp -ip_directory /home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/krnl_scoring/krnl_scoring/krnl_scoring/solution/impl/ip/ip_unzip_dir -design_xml /home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/krnl_scoring/krnl_scoring/krnl_scoring/solution/.autopilot/db/krnl_scoring.design.xml -debug_directory /home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/krnl_scoring/krnl_scoring/krnl_scoring/solution/.debug -hls_directory /home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/krnl_scoring/krnl_scoring/krnl_scoring/solution/impl/ip/hls_files
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 27 18:58:25 2024...
+INFO: [HLS 200-802] Generated output file krnl_scoring/solution/impl/export.xo
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 10.92 seconds. CPU system time: 1.17 seconds. Elapsed time: 16.96 seconds; current allocated memory: 7.047 MB.
+INFO: [HLS 200-1510] Running: close_project 
+HLS completed successfully
+INFO: [HLS 200-112] Total CPU user time: 18.58 seconds. Total CPU system time: 2.21 seconds. Total elapsed time: 25.61 seconds; peak allocated memory: 1.231 GB.
+INFO: [Common 17-206] Exiting vitis_hls at Wed Mar 27 18:58:28 2024...

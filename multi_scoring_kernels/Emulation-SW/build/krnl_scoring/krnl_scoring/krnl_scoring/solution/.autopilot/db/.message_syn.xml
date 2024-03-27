@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.073 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp&apos; ..." resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5292]" key="HLS 207-5292" tag="" content="unused parameter &apos;out_stream&apos; (/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:14:106)" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5292]" key="HLS 207-5292" tag="" content="unused parameter &apos;out_stream&apos; (/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:20:105)" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5292]" key="HLS 207-5292" tag="" content="unused parameter &apos;out_stream&apos; (/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:34:108)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Source Code Analysis and Preprocessing: CPU user time: 0.26 seconds. CPU system time: 0.21 seconds. Elapsed time: 0.83 seconds; current allocated memory: 1.073 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-777]" key="HLS 200-777" tag="" content="Using interface defaults for &apos;Vitis&apos; flow target." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-178]" key="HLS 214-178" tag="" content="Inlining function &apos;std::sqrt(float)&apos; into &apos;scoring_cosine(hls::stream&lt;float, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;, int)&apos; (/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:20:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-178]" key="HLS 214-178" tag="" content="Inlining function &apos;std::sqrt(float)&apos; into &apos;scoring_euclidean(hls::stream&lt;float, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;, int)&apos; (/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:34:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Compiling Optimization and Transform: CPU user time: 2.16 seconds. CPU system time: 0.25 seconds. Elapsed time: 2.7 seconds; current allocated memory: 1.074 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.074 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1493]" key="HLS 200-1493" tag="" content="Running only source code synthesis checks, skipping scheduling and RTL generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Command csynth_design CPU user time: 2.43 seconds. CPU system time: 0.48 seconds. Elapsed time: 3.56 seconds; current allocated memory: 2.105 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1510]" key="HLS 200-1510" tag="" content="Running: close_project" resolution=""/>
+</Messages>

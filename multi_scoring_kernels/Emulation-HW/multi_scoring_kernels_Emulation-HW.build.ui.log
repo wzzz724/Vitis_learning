@@ -1,0 +1,45 @@
+2024-03-27T18:57:47.6347800255-18:57:47 **** Incremental Build of configuration Emulation-HW for project multi_scoring_kernels ****
+000-make -j24 all 
+000-/tools/Xilinx/Vitis/2022.2/bin/v++ --target hw_emu --compile -I"../src" --config krnl_scoring-compile.cfg -o"build/krnl_scoring.xo" "../src/krnl_scoring_unit.cpp"
+000-Option Map File Used: '/tools/Xilinx/Vitis/2022.2/data/vitis/vpp/optMap.xml'
+000-
+000-****** v++ v2022.2 (64-bit)
+000-  **** SW Build 3671529 on 2022-10-13-17:52:11
+000-    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+000-
+000-INFO: [v++ 60-1306] Additional information associated with this v++ compile can be found at:
+000-	Reports: /home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/reports/krnl_scoring
+000-	Log files: /home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/logs/krnl_scoring
+000-Running Dispatch Server on port: 35089
+000-INFO: [v++ 60-1548] Creating build summary session with primary output /home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/krnl_scoring.xo.compile_summary, at Wed Mar 27 18:57:58 2024
+000-INFO: [v++ 60-1315] Creating rulecheck session with output '/home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/reports/krnl_scoring/krnl_scoring_guidance.html', at Wed Mar 27 18:57:58 2024
+000-INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm
+000-INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/hw/hw.xsa'
+000-INFO: [v++ 74-78] Compiler Version string: 2022.2
+000-INFO: [v++ 60-585] Compiling for hardware emulation target
+000-INFO: [v++ 60-423]   Target device: xilinx_u280_gen3x16_xdma_1_202211_1
+000-INFO: [v++ 60-242] Creating kernel: 'krnl_scoring'
+000-
+000-===>The following messages were generated while  performing high-level synthesis for kernel: krnl_scoring Log file: /home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/krnl_scoring/krnl_scoring/vitis_hls.log :
+000-INFO: [v++ 204-61] Pipelining loop 'mem_rd'.
+000-INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'mem_rd'
+000-INFO: [v++ 204-61] Pipelining loop 'mem_rd'.
+000-INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'mem_rd'
+000-INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_36_1'.
+000-INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 7, Depth = 21, loop 'VITIS_LOOP_36_1'
+000-INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_24_1'.
+000-INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 7, Depth = 16, loop 'VITIS_LOOP_24_1'
+000-INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_15_1'.
+000-INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 7, Depth = 14, loop 'VITIS_LOOP_15_1'
+000-INFO: [v++ 200-789] **** Estimated Fmax: 411.00 MHz
+000-INFO: [v++ 60-594] Finished kernel compilation
+000-INFO: [v++ 60-244] Generating system estimate report...
+000-INFO: [v++ 60-1092] Generated system estimate report: /home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/reports/krnl_scoring/system_estimate_krnl_scoring.xtxt
+000-INFO: [v++ 60-586] Created build/krnl_scoring.xo
+000-INFO: [v++ 60-2343] Use the vitis_analyzer tool to visualize and navigate the relevant reports. Run the following command. 
+000-    vitis_analyzer /home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/krnl_scoring.xo.compile_summary 
+000-INFO: [v++ 60-791] Total elapsed time: 0h 0m 40s
+000-INFO: [v++ 60-1653] Closing dispatch client.
+00255-
+18:58:28 Build Finished (took 41s.277ms)
+

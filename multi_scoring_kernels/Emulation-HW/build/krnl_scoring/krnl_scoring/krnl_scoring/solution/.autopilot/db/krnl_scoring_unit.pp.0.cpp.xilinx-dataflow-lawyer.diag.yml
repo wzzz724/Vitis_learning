@@ -1,0 +1,12 @@
+---
+MainSourceFile:  /home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/krnl_scoring/krnl_scoring/krnl_scoring/solution/.autopilot/db/krnl_scoring_unit.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-11] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region'
+    FileOffset:      '53:9'
+    FilePath:        /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-11] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region'
+    FileOffset:      '53:9'
+    FilePath:        /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp
+...

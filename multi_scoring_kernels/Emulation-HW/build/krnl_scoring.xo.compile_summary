@@ -1,0 +1,238 @@
+<ENTRY>
+{
+ "thisFile": "/home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/krnl_scoring.xo.compile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Wed Mar 27 18:57:58 2024",
+ "timestampMillis": "1711537078657",
+ "buildStep": {
+  "cmdId": "40302872-9ef5-4fb4-af6a-412923e2a709",
+  "name": "v++",
+  "logFile": "/home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/krnl_scoring/krnl_scoring.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2022.2/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" --target hw_emu --compile -I../src --config krnl_scoring-compile.cfg -obuild/krnl_scoring.xo ../src/krnl_scoring_unit.cpp ",
+  "args": [
+   "--target",
+   "hw_emu",
+   "--compile",
+   "-I../src",
+   "--config",
+   "krnl_scoring-compile.cfg",
+   "-obuild/krnl_scoring.xo",
+   "../src/krnl_scoring_unit.cpp"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/krnl_scoring-compile.cfg",
+    "content": "platform=xilinx_u280_gen3x16_xdma_1_202211_1\nsave-temps=1\nkernel=krnl_scoring\ndebug=1\nmessageDb=build/krnl_scoring.mdb\ntemp_dir=build\nreport_dir=build/reports\nlog_dir=build/logs\n\n[advanced]\nmisc=solution_name=krnl_scoring"
+   }
+  ],
+  "cwd": "/home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Mar 27 18:57:58 2024",
+ "timestampMillis": "1711537078657",
+ "status": {
+  "cmdId": "40302872-9ef5-4fb4-af6a-412923e2a709",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Wed Mar 27 18:58:01 2024",
+ "timestampMillis": "1711537081552",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_u280_gen3x16_xdma_1_202211_1.xpfm",
+  "hardwareDsa": "",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_COMPILE",
+  "target": "TT_HW_EMU",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "krnl_scoring",
+     "file": "/home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/krnl_scoring.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2022.2. SW Build 3671529 on 2022-10-13-17:52:11"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Mar 27 18:58:01 2024",
+ "timestampMillis": "1711537081553",
+ "buildStep": {
+  "cmdId": "188568be-e998-462f-b3bb-48d2d80f06a6",
+  "name": "vitis_hls",
+  "logFile": "/home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/krnl_scoring/krnl_scoring/vitis_hls.log",
+  "commandLine": "vitis_hls -f /home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/krnl_scoring/krnl_scoring/krnl_scoring.tcl -messageDb vitis_hls.pb",
+  "args": [
+   "vitis_hls",
+   "-f",
+   "/home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/krnl_scoring/krnl_scoring/krnl_scoring.tcl",
+   "-messageDb",
+   "vitis_hls.pb"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Mar 27 18:58:01 2024",
+ "timestampMillis": "1711537081553",
+ "status": {
+  "cmdId": "188568be-e998-462f-b3bb-48d2d80f06a6",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Mar 27 18:58:28 2024",
+ "timestampMillis": "1711537108748",
+ "status": {
+  "cmdId": "188568be-e998-462f-b3bb-48d2d80f06a6",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Mar 27 18:58:28 2024",
+ "timestampMillis": "1711537108756",
+ "report": {
+  "path": "/home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/krnl_scoring/krnl_scoring/krnl_scoring/solution/.autopilot/db/krnl_scoring.design.xml",
+  "name": "krnl_scoring",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_REPORT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Mar 27 18:58:28 2024",
+ "timestampMillis": "1711537108756",
+ "report": {
+  "path": "/home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/krnl_scoring/krnl_scoring/krnl_scoring/solution/.autopilot/db/.message_syn.xml",
+  "name": "krnl_scoring",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_DRC_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Mar 27 18:58:28 2024",
+ "timestampMillis": "1711537108757",
+ "report": {
+  "path": "/home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/reports/krnl_scoring/hls_reports/krnl_scoring_csynth.rpt",
+  "name": "krnl_scoring",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_HLS_CSYNTH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Mar 27 18:58:28 2024",
+ "timestampMillis": "1711537108757",
+ "report": {
+  "path": "/home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/krnl_scoring/krnl_scoring/krnl_scoring/solution/syn/report/krnl_scoring_csynth.xml",
+  "name": "krnl_scoring",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_CSYNTH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Mar 27 18:58:28 2024",
+ "timestampMillis": "1711537108763",
+ "report": {
+  "path": "/home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/reports/krnl_scoring/system_estimate_krnl_scoring.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Mar 27 18:58:28 2024",
+ "timestampMillis": "1711537108822",
+ "status": {
+  "cmdId": "40302872-9ef5-4fb4-af6a-412923e2a709",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Mar 27 18:58:28 2024",
+ "timestampMillis": "1711537108864",
+ "report": {
+  "path": "/home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/reports/krnl_scoring/krnl_scoring_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Mar 27 18:58:28 2024",
+ "timestampMillis": "1711537108864",
+ "report": {
+  "path": "/home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/krnl_scoring_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

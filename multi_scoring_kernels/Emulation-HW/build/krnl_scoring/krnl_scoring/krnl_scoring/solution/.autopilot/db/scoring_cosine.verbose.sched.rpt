@@ -1,0 +1,408 @@
+
+
+================================================================
+== Vitis HLS Report for 'scoring_cosine'
+================================================================
+* Date:           Wed Mar 27 18:58:09 2024
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        krnl_scoring
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  2.342 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 31
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 28 
+28 --> 29 
+29 --> 30 
+30 --> 31 
+31 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%size_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %size"   --->   Operation 32 'read' 'size_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%dot_product_loc = alloca i64 1"   --->   Operation 33 'alloca' 'dot_product_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%norm1_loc = alloca i64 1"   --->   Operation 34 'alloca' 'norm1_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%norm2_loc = alloca i64 1"   --->   Operation 35 'alloca' 'norm2_loc' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 0.85>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%empty = wait i32 @_ssdm_op_Wait"   --->   Operation 36 'wait' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 37 [2/2] (0.85ns)   --->   "%call_ln0 = call void @scoring_cosine_Pipeline_VITIS_LOOP_24_1, i32 %size_read, i32 %norm2_loc, i32 %norm1_loc, i32 %dot_product_loc, i32 %in1_stream, i32 %in2_stream"   --->   Operation 37 'call' 'call_ln0' <Predicate = true> <Delay = 0.85> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 38 [1/2] (0.00ns)   --->   "%call_ln0 = call void @scoring_cosine_Pipeline_VITIS_LOOP_24_1, i32 %size_read, i32 %norm2_loc, i32 %norm1_loc, i32 %dot_product_loc, i32 %in1_stream, i32 %in2_stream"   --->   Operation 38 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 2.29>
+ST_4 : Operation 39 [1/1] (0.00ns)   --->   "%norm2_loc_load = load i32 %norm2_loc"   --->   Operation 39 'load' 'norm2_loc_load' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 40 [1/1] (0.00ns)   --->   "%norm1_loc_load = load i32 %norm1_loc"   --->   Operation 40 'load' 'norm1_loc_load' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 41 [12/12] (2.29ns)   --->   "%tmp_i = fsqrt i32 @llvm.sqrt.f32, i32 %norm1_loc_load" [/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath:464]   --->   Operation 41 'fsqrt' 'tmp_i' <Predicate = true> <Delay = 2.29> <CoreInst = "FSqrt">   --->   Core 35 'FSqrt' <Latency = 11> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_4 : Operation 42 [12/12] (2.29ns)   --->   "%tmp_1_i = fsqrt i32 @llvm.sqrt.f32, i32 %norm2_loc_load" [/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath:464]   --->   Operation 42 'fsqrt' 'tmp_1_i' <Predicate = true> <Delay = 2.29> <CoreInst = "FSqrt">   --->   Core 35 'FSqrt' <Latency = 11> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 2.29>
+ST_5 : Operation 43 [11/12] (2.29ns)   --->   "%tmp_i = fsqrt i32 @llvm.sqrt.f32, i32 %norm1_loc_load" [/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath:464]   --->   Operation 43 'fsqrt' 'tmp_i' <Predicate = true> <Delay = 2.29> <CoreInst = "FSqrt">   --->   Core 35 'FSqrt' <Latency = 11> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_5 : Operation 44 [11/12] (2.29ns)   --->   "%tmp_1_i = fsqrt i32 @llvm.sqrt.f32, i32 %norm2_loc_load" [/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath:464]   --->   Operation 44 'fsqrt' 'tmp_1_i' <Predicate = true> <Delay = 2.29> <CoreInst = "FSqrt">   --->   Core 35 'FSqrt' <Latency = 11> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 2.29>
+ST_6 : Operation 45 [10/12] (2.29ns)   --->   "%tmp_i = fsqrt i32 @llvm.sqrt.f32, i32 %norm1_loc_load" [/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath:464]   --->   Operation 45 'fsqrt' 'tmp_i' <Predicate = true> <Delay = 2.29> <CoreInst = "FSqrt">   --->   Core 35 'FSqrt' <Latency = 11> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_6 : Operation 46 [10/12] (2.29ns)   --->   "%tmp_1_i = fsqrt i32 @llvm.sqrt.f32, i32 %norm2_loc_load" [/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath:464]   --->   Operation 46 'fsqrt' 'tmp_1_i' <Predicate = true> <Delay = 2.29> <CoreInst = "FSqrt">   --->   Core 35 'FSqrt' <Latency = 11> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 2.29>
+ST_7 : Operation 47 [9/12] (2.29ns)   --->   "%tmp_i = fsqrt i32 @llvm.sqrt.f32, i32 %norm1_loc_load" [/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath:464]   --->   Operation 47 'fsqrt' 'tmp_i' <Predicate = true> <Delay = 2.29> <CoreInst = "FSqrt">   --->   Core 35 'FSqrt' <Latency = 11> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_7 : Operation 48 [9/12] (2.29ns)   --->   "%tmp_1_i = fsqrt i32 @llvm.sqrt.f32, i32 %norm2_loc_load" [/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath:464]   --->   Operation 48 'fsqrt' 'tmp_1_i' <Predicate = true> <Delay = 2.29> <CoreInst = "FSqrt">   --->   Core 35 'FSqrt' <Latency = 11> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 2.29>
+ST_8 : Operation 49 [8/12] (2.29ns)   --->   "%tmp_i = fsqrt i32 @llvm.sqrt.f32, i32 %norm1_loc_load" [/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath:464]   --->   Operation 49 'fsqrt' 'tmp_i' <Predicate = true> <Delay = 2.29> <CoreInst = "FSqrt">   --->   Core 35 'FSqrt' <Latency = 11> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_8 : Operation 50 [8/12] (2.29ns)   --->   "%tmp_1_i = fsqrt i32 @llvm.sqrt.f32, i32 %norm2_loc_load" [/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath:464]   --->   Operation 50 'fsqrt' 'tmp_1_i' <Predicate = true> <Delay = 2.29> <CoreInst = "FSqrt">   --->   Core 35 'FSqrt' <Latency = 11> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 2.29>
+ST_9 : Operation 51 [7/12] (2.29ns)   --->   "%tmp_i = fsqrt i32 @llvm.sqrt.f32, i32 %norm1_loc_load" [/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath:464]   --->   Operation 51 'fsqrt' 'tmp_i' <Predicate = true> <Delay = 2.29> <CoreInst = "FSqrt">   --->   Core 35 'FSqrt' <Latency = 11> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_9 : Operation 52 [7/12] (2.29ns)   --->   "%tmp_1_i = fsqrt i32 @llvm.sqrt.f32, i32 %norm2_loc_load" [/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath:464]   --->   Operation 52 'fsqrt' 'tmp_1_i' <Predicate = true> <Delay = 2.29> <CoreInst = "FSqrt">   --->   Core 35 'FSqrt' <Latency = 11> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 2.29>
+ST_10 : Operation 53 [6/12] (2.29ns)   --->   "%tmp_i = fsqrt i32 @llvm.sqrt.f32, i32 %norm1_loc_load" [/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath:464]   --->   Operation 53 'fsqrt' 'tmp_i' <Predicate = true> <Delay = 2.29> <CoreInst = "FSqrt">   --->   Core 35 'FSqrt' <Latency = 11> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_10 : Operation 54 [6/12] (2.29ns)   --->   "%tmp_1_i = fsqrt i32 @llvm.sqrt.f32, i32 %norm2_loc_load" [/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath:464]   --->   Operation 54 'fsqrt' 'tmp_1_i' <Predicate = true> <Delay = 2.29> <CoreInst = "FSqrt">   --->   Core 35 'FSqrt' <Latency = 11> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 2.29>
+ST_11 : Operation 55 [5/12] (2.29ns)   --->   "%tmp_i = fsqrt i32 @llvm.sqrt.f32, i32 %norm1_loc_load" [/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath:464]   --->   Operation 55 'fsqrt' 'tmp_i' <Predicate = true> <Delay = 2.29> <CoreInst = "FSqrt">   --->   Core 35 'FSqrt' <Latency = 11> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_11 : Operation 56 [5/12] (2.29ns)   --->   "%tmp_1_i = fsqrt i32 @llvm.sqrt.f32, i32 %norm2_loc_load" [/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath:464]   --->   Operation 56 'fsqrt' 'tmp_1_i' <Predicate = true> <Delay = 2.29> <CoreInst = "FSqrt">   --->   Core 35 'FSqrt' <Latency = 11> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 2.29>
+ST_12 : Operation 57 [4/12] (2.29ns)   --->   "%tmp_i = fsqrt i32 @llvm.sqrt.f32, i32 %norm1_loc_load" [/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath:464]   --->   Operation 57 'fsqrt' 'tmp_i' <Predicate = true> <Delay = 2.29> <CoreInst = "FSqrt">   --->   Core 35 'FSqrt' <Latency = 11> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_12 : Operation 58 [4/12] (2.29ns)   --->   "%tmp_1_i = fsqrt i32 @llvm.sqrt.f32, i32 %norm2_loc_load" [/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath:464]   --->   Operation 58 'fsqrt' 'tmp_1_i' <Predicate = true> <Delay = 2.29> <CoreInst = "FSqrt">   --->   Core 35 'FSqrt' <Latency = 11> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 2.29>
+ST_13 : Operation 59 [3/12] (2.29ns)   --->   "%tmp_i = fsqrt i32 @llvm.sqrt.f32, i32 %norm1_loc_load" [/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath:464]   --->   Operation 59 'fsqrt' 'tmp_i' <Predicate = true> <Delay = 2.29> <CoreInst = "FSqrt">   --->   Core 35 'FSqrt' <Latency = 11> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_13 : Operation 60 [3/12] (2.29ns)   --->   "%tmp_1_i = fsqrt i32 @llvm.sqrt.f32, i32 %norm2_loc_load" [/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath:464]   --->   Operation 60 'fsqrt' 'tmp_1_i' <Predicate = true> <Delay = 2.29> <CoreInst = "FSqrt">   --->   Core 35 'FSqrt' <Latency = 11> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 2.29>
+ST_14 : Operation 61 [2/12] (2.29ns)   --->   "%tmp_i = fsqrt i32 @llvm.sqrt.f32, i32 %norm1_loc_load" [/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath:464]   --->   Operation 61 'fsqrt' 'tmp_i' <Predicate = true> <Delay = 2.29> <CoreInst = "FSqrt">   --->   Core 35 'FSqrt' <Latency = 11> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_14 : Operation 62 [2/12] (2.29ns)   --->   "%tmp_1_i = fsqrt i32 @llvm.sqrt.f32, i32 %norm2_loc_load" [/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath:464]   --->   Operation 62 'fsqrt' 'tmp_1_i' <Predicate = true> <Delay = 2.29> <CoreInst = "FSqrt">   --->   Core 35 'FSqrt' <Latency = 11> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 2.29>
+ST_15 : Operation 63 [1/12] (2.29ns)   --->   "%tmp_i = fsqrt i32 @llvm.sqrt.f32, i32 %norm1_loc_load" [/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath:464]   --->   Operation 63 'fsqrt' 'tmp_i' <Predicate = true> <Delay = 2.29> <CoreInst = "FSqrt">   --->   Core 35 'FSqrt' <Latency = 11> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_15 : Operation 64 [1/12] (2.29ns)   --->   "%tmp_1_i = fsqrt i32 @llvm.sqrt.f32, i32 %norm2_loc_load" [/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath:464]   --->   Operation 64 'fsqrt' 'tmp_1_i' <Predicate = true> <Delay = 2.29> <CoreInst = "FSqrt">   --->   Core 35 'FSqrt' <Latency = 11> <II = 1> <Delay = 2.29> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 16 <SV = 15> <Delay = 2.32>
+ST_16 : Operation 65 [4/4] (2.32ns)   --->   "%mul8_i = fmul i32 %tmp_i, i32 %tmp_1_i" [/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:31]   --->   Operation 65 'fmul' 'mul8_i' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 17 <SV = 16> <Delay = 2.32>
+ST_17 : Operation 66 [3/4] (2.32ns)   --->   "%mul8_i = fmul i32 %tmp_i, i32 %tmp_1_i" [/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:31]   --->   Operation 66 'fmul' 'mul8_i' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 18 <SV = 17> <Delay = 2.32>
+ST_18 : Operation 67 [2/4] (2.32ns)   --->   "%mul8_i = fmul i32 %tmp_i, i32 %tmp_1_i" [/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:31]   --->   Operation 67 'fmul' 'mul8_i' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 19 <SV = 18> <Delay = 2.32>
+ST_19 : Operation 68 [1/4] (2.32ns)   --->   "%mul8_i = fmul i32 %tmp_i, i32 %tmp_1_i" [/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:31]   --->   Operation 68 'fmul' 'mul8_i' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 20 <SV = 19> <Delay = 2.32>
+ST_20 : Operation 69 [1/1] (0.00ns)   --->   "%dot_product_loc_load = load i32 %dot_product_loc"   --->   Operation 69 'load' 'dot_product_loc_load' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 70 [12/12] (2.32ns)   --->   "%div_i = fdiv i32 %dot_product_loc_load, i32 %mul8_i" [/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:31]   --->   Operation 70 'fdiv' 'div_i' <Predicate = true> <Delay = 2.32> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 11> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 21 <SV = 20> <Delay = 2.32>
+ST_21 : Operation 71 [11/12] (2.32ns)   --->   "%div_i = fdiv i32 %dot_product_loc_load, i32 %mul8_i" [/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:31]   --->   Operation 71 'fdiv' 'div_i' <Predicate = true> <Delay = 2.32> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 11> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 22 <SV = 21> <Delay = 2.32>
+ST_22 : Operation 72 [10/12] (2.32ns)   --->   "%div_i = fdiv i32 %dot_product_loc_load, i32 %mul8_i" [/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:31]   --->   Operation 72 'fdiv' 'div_i' <Predicate = true> <Delay = 2.32> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 11> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 23 <SV = 22> <Delay = 2.32>
+ST_23 : Operation 73 [9/12] (2.32ns)   --->   "%div_i = fdiv i32 %dot_product_loc_load, i32 %mul8_i" [/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:31]   --->   Operation 73 'fdiv' 'div_i' <Predicate = true> <Delay = 2.32> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 11> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 24 <SV = 23> <Delay = 2.32>
+ST_24 : Operation 74 [8/12] (2.32ns)   --->   "%div_i = fdiv i32 %dot_product_loc_load, i32 %mul8_i" [/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:31]   --->   Operation 74 'fdiv' 'div_i' <Predicate = true> <Delay = 2.32> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 11> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 25 <SV = 24> <Delay = 2.32>
+ST_25 : Operation 75 [7/12] (2.32ns)   --->   "%div_i = fdiv i32 %dot_product_loc_load, i32 %mul8_i" [/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:31]   --->   Operation 75 'fdiv' 'div_i' <Predicate = true> <Delay = 2.32> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 11> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 26 <SV = 25> <Delay = 2.32>
+ST_26 : Operation 76 [6/12] (2.32ns)   --->   "%div_i = fdiv i32 %dot_product_loc_load, i32 %mul8_i" [/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:31]   --->   Operation 76 'fdiv' 'div_i' <Predicate = true> <Delay = 2.32> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 11> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 27 <SV = 26> <Delay = 2.32>
+ST_27 : Operation 77 [5/12] (2.32ns)   --->   "%div_i = fdiv i32 %dot_product_loc_load, i32 %mul8_i" [/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:31]   --->   Operation 77 'fdiv' 'div_i' <Predicate = true> <Delay = 2.32> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 11> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 28 <SV = 27> <Delay = 2.32>
+ST_28 : Operation 78 [4/12] (2.32ns)   --->   "%div_i = fdiv i32 %dot_product_loc_load, i32 %mul8_i" [/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:31]   --->   Operation 78 'fdiv' 'div_i' <Predicate = true> <Delay = 2.32> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 11> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 29 <SV = 28> <Delay = 2.32>
+ST_29 : Operation 79 [3/12] (2.32ns)   --->   "%div_i = fdiv i32 %dot_product_loc_load, i32 %mul8_i" [/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:31]   --->   Operation 79 'fdiv' 'div_i' <Predicate = true> <Delay = 2.32> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 11> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 30 <SV = 29> <Delay = 2.32>
+ST_30 : Operation 80 [2/12] (2.32ns)   --->   "%div_i = fdiv i32 %dot_product_loc_load, i32 %mul8_i" [/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:31]   --->   Operation 80 'fdiv' 'div_i' <Predicate = true> <Delay = 2.32> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 11> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 31 <SV = 30> <Delay = 2.32>
+ST_31 : Operation 81 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %in1_stream, void @empty_14, i32 0, i32 0, void @empty_2, i32 0, i32 0, void @empty_2, void @empty_2, void @empty_2, i32 0, i32 0, i32 0, i32 0, void @empty_2, void @empty_2, i32 4294967295, i32 0"   --->   Operation 81 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_31 : Operation 82 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %in1_stream, void @empty_14, i32 0, i32 0, void @empty_2, i32 0, i32 0, void @empty_2, void @empty_2, void @empty_2, i32 0, i32 0, i32 0, i32 0, void @empty_2, void @empty_2, i32 4294967295, i32 0"   --->   Operation 82 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_31 : Operation 83 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %in1_stream, void @empty_14, i32 0, i32 0, void @empty_2, i32 0, i32 0, void @empty_2, void @empty_2, void @empty_2, i32 0, i32 0, i32 0, i32 0, void @empty_2, void @empty_2, i32 4294967295, i32 0"   --->   Operation 83 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_31 : Operation 84 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %in1_stream, void @empty_14, i32 0, i32 0, void @empty_2, i32 0, i32 0, void @empty_2, void @empty_2, void @empty_2, i32 0, i32 0, i32 0, i32 0, void @empty_2, void @empty_2, i32 4294967295, i32 0"   --->   Operation 84 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_31 : Operation 85 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %in1_stream, void @empty_14, i32 0, i32 0, void @empty_2, i32 0, i32 0, void @empty_2, void @empty_2, void @empty_2, i32 0, i32 0, i32 0, i32 0, void @empty_2, void @empty_2, i32 4294967295, i32 0"   --->   Operation 85 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_31 : Operation 86 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %in2_stream, void @empty_14, i32 0, i32 0, void @empty_2, i32 0, i32 0, void @empty_2, void @empty_2, void @empty_2, i32 0, i32 0, i32 0, i32 0, void @empty_2, void @empty_2, i32 4294967295, i32 0"   --->   Operation 86 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_31 : Operation 87 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %in2_stream, void @empty_14, i32 0, i32 0, void @empty_2, i32 0, i32 0, void @empty_2, void @empty_2, void @empty_2, i32 0, i32 0, i32 0, i32 0, void @empty_2, void @empty_2, i32 4294967295, i32 0"   --->   Operation 87 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_31 : Operation 88 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %in2_stream, void @empty_14, i32 0, i32 0, void @empty_2, i32 0, i32 0, void @empty_2, void @empty_2, void @empty_2, i32 0, i32 0, i32 0, i32 0, void @empty_2, void @empty_2, i32 4294967295, i32 0"   --->   Operation 88 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_31 : Operation 89 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %in2_stream, void @empty_14, i32 0, i32 0, void @empty_2, i32 0, i32 0, void @empty_2, void @empty_2, void @empty_2, i32 0, i32 0, i32 0, i32 0, void @empty_2, void @empty_2, i32 4294967295, i32 0"   --->   Operation 89 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_31 : Operation 90 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %in2_stream, void @empty_14, i32 0, i32 0, void @empty_2, i32 0, i32 0, void @empty_2, void @empty_2, void @empty_2, i32 0, i32 0, i32 0, i32 0, void @empty_2, void @empty_2, i32 4294967295, i32 0"   --->   Operation 90 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_31 : Operation 91 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %in2_stream, void @empty_14, i32 0, i32 0, void @empty_2, i32 0, i32 0, void @empty_2, void @empty_2, void @empty_2, i32 0, i32 0, i32 0, i32 0, void @empty_2, void @empty_2, i32 4294967295, i32 0"   --->   Operation 91 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_31 : Operation 92 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %in1_stream, void @empty_14, i32 0, i32 0, void @empty_2, i32 0, i32 0, void @empty_2, void @empty_2, void @empty_2, i32 0, i32 0, i32 0, i32 0, void @empty_2, void @empty_2, i32 4294967295, i32 0"   --->   Operation 92 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_31 : Operation 93 [1/12] (2.32ns)   --->   "%div_i = fdiv i32 %dot_product_loc_load, i32 %mul8_i" [/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:31]   --->   Operation 93 'fdiv' 'div_i' <Predicate = true> <Delay = 2.32> <CoreInst = "FDiv">   --->   Core 20 'FDiv' <Latency = 11> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_31 : Operation 94 [1/1] (0.00ns)   --->   "%store_ln31 = store i32 %div_i, i32 %result" [/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:31]   --->   Operation 94 'store' 'store_ln31' <Predicate = true> <Delay = 0.00>
+ST_31 : Operation 95 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 95 'ret' 'ret_ln0' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 3.33ns, clock uncertainty: 0.9ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 0.859ns
+The critical path consists of the following:
+	'call' operation ('call_ln0') to 'scoring_cosine_Pipeline_VITIS_LOOP_24_1' [22]  (0.859 ns)
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 2.3ns
+The critical path consists of the following:
+	'load' operation ('norm1_loc_load') on local variable 'norm1_loc' [24]  (0 ns)
+	'fsqrt' operation ('tmp_i', /tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath:464) [26]  (2.3 ns)
+
+ <State 5>: 2.3ns
+The critical path consists of the following:
+	'fsqrt' operation ('tmp_i', /tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath:464) [26]  (2.3 ns)
+
+ <State 6>: 2.3ns
+The critical path consists of the following:
+	'fsqrt' operation ('tmp_i', /tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath:464) [26]  (2.3 ns)
+
+ <State 7>: 2.3ns
+The critical path consists of the following:
+	'fsqrt' operation ('tmp_i', /tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath:464) [26]  (2.3 ns)
+
+ <State 8>: 2.3ns
+The critical path consists of the following:
+	'fsqrt' operation ('tmp_i', /tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath:464) [26]  (2.3 ns)
+
+ <State 9>: 2.3ns
+The critical path consists of the following:
+	'fsqrt' operation ('tmp_i', /tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath:464) [26]  (2.3 ns)
+
+ <State 10>: 2.3ns
+The critical path consists of the following:
+	'fsqrt' operation ('tmp_i', /tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath:464) [26]  (2.3 ns)
+
+ <State 11>: 2.3ns
+The critical path consists of the following:
+	'fsqrt' operation ('tmp_i', /tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath:464) [26]  (2.3 ns)
+
+ <State 12>: 2.3ns
+The critical path consists of the following:
+	'fsqrt' operation ('tmp_i', /tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath:464) [26]  (2.3 ns)
+
+ <State 13>: 2.3ns
+The critical path consists of the following:
+	'fsqrt' operation ('tmp_i', /tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath:464) [26]  (2.3 ns)
+
+ <State 14>: 2.3ns
+The critical path consists of the following:
+	'fsqrt' operation ('tmp_i', /tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath:464) [26]  (2.3 ns)
+
+ <State 15>: 2.3ns
+The critical path consists of the following:
+	'fsqrt' operation ('tmp_i', /tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath:464) [26]  (2.3 ns)
+
+ <State 16>: 2.32ns
+The critical path consists of the following:
+	'fmul' operation ('mul8_i', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:31) [28]  (2.32 ns)
+
+ <State 17>: 2.32ns
+The critical path consists of the following:
+	'fmul' operation ('mul8_i', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:31) [28]  (2.32 ns)
+
+ <State 18>: 2.32ns
+The critical path consists of the following:
+	'fmul' operation ('mul8_i', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:31) [28]  (2.32 ns)
+
+ <State 19>: 2.32ns
+The critical path consists of the following:
+	'fmul' operation ('mul8_i', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:31) [28]  (2.32 ns)
+
+ <State 20>: 2.33ns
+The critical path consists of the following:
+	'load' operation ('dot_product_loc_load') on local variable 'dot_product_loc' [25]  (0 ns)
+	'fdiv' operation ('div_i', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:31) [29]  (2.33 ns)
+
+ <State 21>: 2.33ns
+The critical path consists of the following:
+	'fdiv' operation ('div_i', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:31) [29]  (2.33 ns)
+
+ <State 22>: 2.33ns
+The critical path consists of the following:
+	'fdiv' operation ('div_i', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:31) [29]  (2.33 ns)
+
+ <State 23>: 2.33ns
+The critical path consists of the following:
+	'fdiv' operation ('div_i', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:31) [29]  (2.33 ns)
+
+ <State 24>: 2.33ns
+The critical path consists of the following:
+	'fdiv' operation ('div_i', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:31) [29]  (2.33 ns)
+
+ <State 25>: 2.33ns
+The critical path consists of the following:
+	'fdiv' operation ('div_i', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:31) [29]  (2.33 ns)
+
+ <State 26>: 2.33ns
+The critical path consists of the following:
+	'fdiv' operation ('div_i', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:31) [29]  (2.33 ns)
+
+ <State 27>: 2.33ns
+The critical path consists of the following:
+	'fdiv' operation ('div_i', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:31) [29]  (2.33 ns)
+
+ <State 28>: 2.33ns
+The critical path consists of the following:
+	'fdiv' operation ('div_i', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:31) [29]  (2.33 ns)
+
+ <State 29>: 2.33ns
+The critical path consists of the following:
+	'fdiv' operation ('div_i', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:31) [29]  (2.33 ns)
+
+ <State 30>: 2.33ns
+The critical path consists of the following:
+	'fdiv' operation ('div_i', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:31) [29]  (2.33 ns)
+
+ <State 31>: 2.33ns
+The critical path consists of the following:
+	'fdiv' operation ('div_i', /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:31) [29]  (2.33 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

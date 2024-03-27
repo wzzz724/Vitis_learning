@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Mon Mar 25 16:56:01 2024
+# Process ID: 10998
+# Current directory: /home/cnic/wz/workspace/example_kernels/Hardware/build/krnl_vadd/krnl_vadd/krnl_vadd/solution/impl/ip
+# Command line: vivado -notrace -mode batch -source run_ippack.tcl
+# Log file: /home/cnic/wz/workspace/example_kernels/Hardware/build/krnl_vadd/krnl_vadd/krnl_vadd/solution/impl/ip/vivado.log
+# Journal file: /home/cnic/wz/workspace/example_kernels/Hardware/build/krnl_vadd/krnl_vadd/krnl_vadd/solution/impl/ip/vivado.jou
+# Running On: ts02, OS: Linux, CPU Frequency: 2100.000 MHz, CPU Physical cores: 16, Host memory: 134678 MB
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace

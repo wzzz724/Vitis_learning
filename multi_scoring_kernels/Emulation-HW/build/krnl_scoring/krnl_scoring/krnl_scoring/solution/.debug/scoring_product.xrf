@@ -1,0 +1,17 @@
+Begin Function 'scoring_product'
+
+RTL state condition: (1'b1 == ap_CS_fsm_state1)
+# ST_1
+local empty <> <integer> <> 'trunc' <>
+reg: empty_reg_72[30:0] lv
+
+local icmp_ln15 <icmp_15> <integer> <Comparator> 'icmp' </home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:15>
+icmp_ln15 /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:15
+reg: icmp_ln15_reg_83[0:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state2)
+# ST_2
+
+End Function 'scoring_product'
+

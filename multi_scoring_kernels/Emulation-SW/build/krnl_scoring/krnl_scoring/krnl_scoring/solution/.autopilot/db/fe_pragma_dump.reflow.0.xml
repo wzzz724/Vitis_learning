@@ -1,0 +1,8 @@
+<pragmas>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<float, 0>::operator<<(float const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp" line="53" pragmaType="dataflow" parentfunction="krnl_scoring" disable_start_propagation="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<float, 0>::stream(char const*)" off="0" region="0" recursive="0"/>
+</pragmas>

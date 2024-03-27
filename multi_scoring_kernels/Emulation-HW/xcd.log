@@ -1,0 +1,66 @@
+Wed Mar 27 18:55:07 2024: Running xcd server. This server was built by gradle.
+Wed Mar 27 18:55:07 2024: Server was asked to start on port: '40079'
+Wed Mar 27 18:55:07 2024: Server is using token UUID: '5d5ae149-db5a-4029-aacb-d880102e7ed5'
+Wed Mar 27 18:55:07 2024: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Wed Mar 27 18:55:07 2024: Attempting to start server on port '40079'
+Wed Mar 27 18:55:07 2024: XCD main fifo: created main fifo '/tmp/xcdmain5d5ae149-db5a-4029-aacb-d880102e7ed5', fd read = 14
+Wed Mar 27 18:55:07 2024: Running Dispatch Server
+Wed Mar 27 18:55:07 2024: Version 2.2.0
+Wed Mar 27 18:55:16 2024: Dispatch Server: Accepted socket connection from client
+Wed Mar 27 18:55:16 2024: Starting Socket connection
+Wed Mar 27 18:55:16 2024: EXCHANGE_TOKEN received, server token: 5d5ae149-db5a-4029-aacb-d880102e7ed5, passed token: 5d5ae149-db5a-4029-aacb-d880102e7ed5
+Wed Mar 27 18:55:16 2024: DISPATCH_HANDLER: Adding handler from function makeHandler in library libxv_system_diagram
+Wed Mar 27 18:55:16 2024: SESSION_MGR: creating session with session uuid: '0b79d006-a7ce-4b22-ac13-14c74ef1572a' and name 'krnl_scoring'
+Wed Mar 27 18:55:16 2024: KERNEL_SVC: creating session with uuid: '0b79d006-a7ce-4b22-ac13-14c74ef1572a' and name 'krnl_scoring'
+Wed Mar 27 18:55:16 2024: GUIDANCE_SMGR: creating guidance session with uuid: '0b79d006-a7ce-4b22-ac13-14c74ef1572a' and name 'krnl_scoring'
+Wed Mar 27 18:55:16 2024: SYSTEM_DIAGRAM: creating session with uuid: '0b79d006-a7ce-4b22-ac13-14c74ef1572a' and name 'krnl_scoring'
+Wed Mar 27 18:55:23 2024: Dispatch Server: Accepted socket connection from client
+Wed Mar 27 18:55:23 2024: Starting Socket connection
+Wed Mar 27 18:55:26 2024: SESSION_MGR: closing session for UUID '0b79d006-a7ce-4b22-ac13-14c74ef1572a' with name 'krnl_scoring'
+Wed Mar 27 18:55:26 2024: KERNEL_SVC: closing session for UUID '0b79d006-a7ce-4b22-ac13-14c74ef1572a' with name 'krnl_scoring'
+Wed Mar 27 18:55:26 2024: GUIDANCE_SMGR: closing session for UUID '0b79d006-a7ce-4b22-ac13-14c74ef1572a' with name 'krnl_scoring'
+Wed Mar 27 18:55:26 2024: SYSTEM_DIAGRAM: closing session for UUID '0b79d006-a7ce-4b22-ac13-14c74ef1572a' with name 'krnl_scoring'
+Wed Mar 27 18:55:26 2024: STOP_SERVER received, server token: 5d5ae149-db5a-4029-aacb-d880102e7ed5, passed token: 5d5ae149-db5a-4029-aacb-d880102e7ed5
+Wed Mar 27 18:55:26 2024: Socket received request to stop server.
+Wed Mar 27 18:55:26 2024: Dispatch Server: do_await_stop
+Wed Mar 27 18:55:26 2024: Dispatch Server: stopping mainFifo_
+Wed Mar 27 18:55:26 2024: XCD main fifo: Stopping
+Wed Mar 27 18:55:26 2024: XCD main fifo: do_read error code: Operation canceled
+Wed Mar 27 18:55:26 2024: XCD main fifo: bytes_transferred: 0
+Wed Mar 27 18:55:26 2024: SERVER: destructor for server bound to port 40079
+Wed Mar 27 18:55:26 2024: XCD main fifo: Good unlink of /tmp/xcdmain5d5ae149-db5a-4029-aacb-d880102e7ed5
+Wed Mar 27 18:55:26 2024: Server exiting with status 0.
+Wed Mar 27 18:55:26 2024: Closing log file.
+Wed Mar 27 18:57:49 2024: Running xcd server. This server was built by gradle.
+Wed Mar 27 18:57:49 2024: Server was asked to start on port: '35089'
+Wed Mar 27 18:57:49 2024: Server is using token UUID: '7740c291-a4db-4655-9f8f-14aa4a4e0ada'
+Wed Mar 27 18:57:49 2024: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+Wed Mar 27 18:57:49 2024: Attempting to start server on port '35089'
+Wed Mar 27 18:57:49 2024: XCD main fifo: created main fifo '/tmp/xcdmain7740c291-a4db-4655-9f8f-14aa4a4e0ada', fd read = 14
+Wed Mar 27 18:57:49 2024: Running Dispatch Server
+Wed Mar 27 18:57:49 2024: Version 2.2.0
+Wed Mar 27 18:57:58 2024: Dispatch Server: Accepted socket connection from client
+Wed Mar 27 18:57:58 2024: Starting Socket connection
+Wed Mar 27 18:57:58 2024: EXCHANGE_TOKEN received, server token: 7740c291-a4db-4655-9f8f-14aa4a4e0ada, passed token: 7740c291-a4db-4655-9f8f-14aa4a4e0ada
+Wed Mar 27 18:57:58 2024: DISPATCH_HANDLER: Adding handler from function makeHandler in library libxv_system_diagram
+Wed Mar 27 18:57:58 2024: SESSION_MGR: creating session with session uuid: 'cc901a1a-4650-4a5d-9a62-9b77eaae6f56' and name 'krnl_scoring'
+Wed Mar 27 18:57:58 2024: KERNEL_SVC: creating session with uuid: 'cc901a1a-4650-4a5d-9a62-9b77eaae6f56' and name 'krnl_scoring'
+Wed Mar 27 18:57:58 2024: GUIDANCE_SMGR: creating guidance session with uuid: 'cc901a1a-4650-4a5d-9a62-9b77eaae6f56' and name 'krnl_scoring'
+Wed Mar 27 18:57:58 2024: SYSTEM_DIAGRAM: creating session with uuid: 'cc901a1a-4650-4a5d-9a62-9b77eaae6f56' and name 'krnl_scoring'
+Wed Mar 27 18:58:05 2024: Dispatch Server: Accepted socket connection from client
+Wed Mar 27 18:58:05 2024: Starting Socket connection
+Wed Mar 27 18:58:28 2024: SESSION_MGR: closing session for UUID 'cc901a1a-4650-4a5d-9a62-9b77eaae6f56' with name 'krnl_scoring'
+Wed Mar 27 18:58:28 2024: KERNEL_SVC: closing session for UUID 'cc901a1a-4650-4a5d-9a62-9b77eaae6f56' with name 'krnl_scoring'
+Wed Mar 27 18:58:28 2024: GUIDANCE_SMGR: closing session for UUID 'cc901a1a-4650-4a5d-9a62-9b77eaae6f56' with name 'krnl_scoring'
+Wed Mar 27 18:58:28 2024: SYSTEM_DIAGRAM: closing session for UUID 'cc901a1a-4650-4a5d-9a62-9b77eaae6f56' with name 'krnl_scoring'
+Wed Mar 27 18:58:28 2024: STOP_SERVER received, server token: 7740c291-a4db-4655-9f8f-14aa4a4e0ada, passed token: 7740c291-a4db-4655-9f8f-14aa4a4e0ada
+Wed Mar 27 18:58:28 2024: Socket received request to stop server.
+Wed Mar 27 18:58:28 2024: Dispatch Server: do_await_stop
+Wed Mar 27 18:58:28 2024: Dispatch Server: stopping mainFifo_
+Wed Mar 27 18:58:28 2024: XCD main fifo: Stopping
+Wed Mar 27 18:58:28 2024: XCD main fifo: do_read error code: Operation canceled
+Wed Mar 27 18:58:28 2024: XCD main fifo: bytes_transferred: 0
+Wed Mar 27 18:58:28 2024: SERVER: destructor for server bound to port 35089
+Wed Mar 27 18:58:28 2024: XCD main fifo: Good unlink of /tmp/xcdmain7740c291-a4db-4655-9f8f-14aa4a4e0ada
+Wed Mar 27 18:58:28 2024: Server exiting with status 0.
+Wed Mar 27 18:58:28 2024: Closing log file.

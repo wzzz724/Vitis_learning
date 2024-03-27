@@ -1,0 +1,42 @@
+Begin Function 'scoring_euclidean'
+
+RTL state condition: (1'b1 == ap_CS_fsm_pp0_stage0)
+# ST_2
+local icmp_ln36 <icmp_36> <integer> <Comparator> 'icmp' </home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:36>
+icmp_ln36 /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:36
+reg: icmp_ln36_reg_166[0:0] lv
+
+local i_2 <> <integer> <Arithmetic> 'add' <>
+reg: i_2_reg_170[30:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_pp0_stage1)
+# ST_3
+local in1_stream_read <read_37> <integer> <FifoRead> 'read' </home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:37>
+in1_stream_read /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:37
+reg: in1_stream_read_reg_175[31:0] lv
+
+local in2_stream_read <read_37> <integer> <FifoRead> 'read' </home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:37>
+in2_stream_read /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:37
+reg: in2_stream_read_reg_180[31:0] lv
+
+# ST_10
+local diff <fsub_37> <float> <MultiCycle> 'fsub' </home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:37>
+diff /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:37
+reg: reg_84[31:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_pp0_stage5)
+# ST_14
+local mul_i <fmul_38> <float> <MultiCycle> 'fmul' </home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:38>
+mul_i /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:38
+reg: mul_i_reg_195[31:0] lv
+
+# ST_21
+local sum_1 <fadd_38> <float> <MultiCycle> 'fadd' </home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:38>
+sum /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:38
+reg: reg_84[31:0] lv
+
+
+End Function 'scoring_euclidean'
+

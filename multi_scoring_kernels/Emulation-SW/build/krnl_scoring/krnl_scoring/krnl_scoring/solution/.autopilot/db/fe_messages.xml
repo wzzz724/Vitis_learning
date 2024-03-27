@@ -1,0 +1,24 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:14:106" msg_body="unused parameter 'out_stream'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:20:105" msg_body="unused parameter 'out_stream'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:34:108" msg_body="unused parameter 'out_stream'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/cnic/wz/workspace/multi_scoring_kernels/Emulation-SW/build/krnl_scoring/krnl_scoring/krnl_scoring.tcl:29:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="krnl_scoring" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=krnl_scoring" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:53:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_scoring" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:20:0" msg_body="Inlining function 'std::sqrt(float)' into 'scoring_cosine(hls::stream&lt;float, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;, int)'">
+        <args Callee="std::sqrt(float)" Caller="scoring_cosine(hls::stream&lt;float, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;, int)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:34:0" msg_body="Inlining function 'std::sqrt(float)' into 'scoring_euclidean(hls::stream&lt;float, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;, int)'">
+        <args Callee="std::sqrt(float)" Caller="scoring_euclidean(hls::stream&lt;float, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;, int)"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

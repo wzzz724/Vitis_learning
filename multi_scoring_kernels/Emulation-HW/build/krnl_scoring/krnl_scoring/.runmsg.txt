@@ -1,0 +1,2 @@
+performing high-level synthesis for kernel: krnl_scoring
+Log file: /home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/krnl_scoring/krnl_scoring/vitis_hls.log

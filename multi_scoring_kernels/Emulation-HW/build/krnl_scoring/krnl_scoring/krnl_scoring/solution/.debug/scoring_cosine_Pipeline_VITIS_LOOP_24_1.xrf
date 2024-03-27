@@ -1,0 +1,70 @@
+Begin Function 'scoring_cosine_Pipeline_VITIS_LOOP_24_1'
+
+RTL state condition: (1'b1 == ap_CS_fsm_pp0_stage0)
+# ST_1
+local icmp_ln24 <icmp_24> <integer> <Comparator> 'icmp' </home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:24>
+icmp_ln24 /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:24
+reg: icmp_ln24_reg_232[0:0] lv
+
+local i_3 <> <integer> <Arithmetic> 'add' <>
+reg: i_3_reg_236[30:0] lv
+
+# ST_8
+local mul4_i <fmul_29> <float> <MultiCycle> 'fmul' </home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:29>
+mul4_i /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:29
+reg: mul4_i_reg_283[31:0] lv
+
+# ST_15
+local norm2_1 <fadd_29> <float> <MultiCycle> 'fadd' </home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:29>
+norm2 /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:29
+reg: reg_107[31:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_pp0_stage1)
+# ST_2
+local in1_stream_read <read_25> <integer> <FifoRead> 'read' </home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:25>
+in1_stream_read /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:25
+reg: in1_stream_read_reg_241[31:0] lv
+
+local in2_stream_read <read_26> <integer> <FifoRead> 'read' </home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:26>
+in2_stream_read /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:26
+reg: in2_stream_read_reg_246[31:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_pp0_stage2)
+# ST_3
+local ele1 <bitcast_25> <float> <> 'bitcast' </home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:25>
+ele1 /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:25
+reg: ele1_reg_251[31:0] lv
+
+local ele2 <bitcast_26> <float> <> 'bitcast' </home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:26>
+ele2 /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:26
+reg: ele2_reg_257[31:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_pp0_stage5)
+# ST_6
+local mul_i <fmul_27> <float> <MultiCycle> 'fmul' </home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:27>
+mul_i /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:27
+reg: mul_i_reg_263[31:0] lv
+
+# ST_13
+local dot_product_1 <fadd_27> <float> <MultiCycle> 'fadd' </home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:27>
+dot_product /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:27
+reg: reg_107[31:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_pp0_stage6)
+# ST_7
+local mul2_i <fmul_28> <float> <MultiCycle> 'fmul' </home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:28>
+mul2_i /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:28
+reg: mul2_i_reg_273[31:0] lv
+
+# ST_14
+local norm1_1 <fadd_28> <float> <MultiCycle> 'fadd' </home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:28>
+norm1 /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:28
+reg: reg_107[31:0] lv
+
+
+End Function 'scoring_cosine_Pipeline_VITIS_LOOP_24_1'
+

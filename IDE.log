@@ -1,0 +1,81 @@
+11:15:05 DEBUG : Logs will be stored at '/home/cnic/wz/workspace/IDE.log'.
+11:15:06 INFO  : Launching XSCT server: xsct -n  -interactive /home/cnic/wz/workspace/temp_xsdb_launch_script.tcl
+11:15:06 INFO  : Registering command handlers for Vitis TCF services
+11:15:06 INFO  : Platform repository initialization has completed.
+11:15:07 INFO  : XSCT server has started successfully.
+11:15:07 INFO  : Successfully done setting XSCT server connection channel  
+11:15:07 INFO  : Successfully done setting workspace for the tool. 
+11:15:07 INFO  : Successfully done query RDI_DATADIR 
+11:15:07 INFO  : plnx-install-location is set to ''
+16:22:34 DEBUG : Logs will be stored at '/home/cnic/wz/workspace/IDE.log'.
+16:22:35 INFO  : Launching XSCT server: xsct -n  -interactive /home/cnic/wz/workspace/temp_xsdb_launch_script.tcl
+16:22:36 INFO  : Registering command handlers for Vitis TCF services
+16:22:36 INFO  : Platform repository initialization has completed.
+16:22:37 INFO  : XSCT server has started successfully.
+16:22:37 INFO  : Successfully done setting XSCT server connection channel  
+16:22:37 INFO  : plnx-install-location is set to ''
+16:22:37 INFO  : Successfully done query RDI_DATADIR 
+16:22:37 INFO  : Successfully done setting workspace for the tool. 
+16:39:45 INFO  : Launching executable: Emulation-SW/example ${project_loc:example_system}/Emulation-SW/binary_container_1.xclbin
+16:41:03 INFO  : Build configuration of 'example_system_hw_link' is updated to 'Emulation-HW'
+16:41:03 INFO  : Build configuration of 'example_kernels' is updated to 'Emulation-HW'
+16:41:03 INFO  : Build configuration of 'example' is updated to 'Emulation-HW'
+16:47:54 INFO  : Launching executable: Emulation-HW/example ${project_loc:example_system}/Emulation-HW/binary_container_1.xclbin
+16:55:35 INFO  : Build configuration of 'example_system_hw_link' is updated to 'Hardware'
+16:55:35 INFO  : Build configuration of 'example_kernels' is updated to 'Hardware'
+16:55:35 INFO  : Build configuration of 'example' is updated to 'Hardware'
+14:56:18 DEBUG : Logs will be stored at '/home/cnic/wz/workspace/IDE.log'.
+14:56:18 INFO  : Launching XSCT server: xsct -n  -interactive /home/cnic/wz/workspace/temp_xsdb_launch_script.tcl
+14:56:19 INFO  : Platform repository initialization has completed.
+14:56:20 INFO  : Registering command handlers for Vitis TCF services
+14:56:20 INFO  : XSCT server has started successfully.
+14:56:20 INFO  : Successfully done setting XSCT server connection channel  
+14:56:21 INFO  : plnx-install-location is set to ''
+14:56:21 INFO  : Successfully done setting workspace for the tool. 
+14:56:21 INFO  : Successfully done query RDI_DATADIR 
+16:02:21 INFO  : Launching executable: Hardware/example ${project_loc:example_system}/Hardware/binary_container_1.xclbin
+16:14:54 DEBUG : Logs will be stored at '/home/cnic/wz/workspace/IDE.log'.
+16:14:54 INFO  : Launching XSCT server: xsct -n  -interactive /home/cnic/wz/workspace/temp_xsdb_launch_script.tcl
+16:14:55 INFO  : Platform repository initialization has completed.
+16:14:55 INFO  : XSCT server has started successfully.
+16:14:55 INFO  : plnx-install-location is set to ''
+16:14:55 INFO  : Successfully done setting XSCT server connection channel  
+16:14:55 INFO  : Successfully done setting workspace for the tool. 
+16:14:56 INFO  : Successfully done query RDI_DATADIR 
+16:14:56 INFO  : Registering command handlers for Vitis TCF services
+20:18:24 DEBUG : Logs will be stored at '/home/cnic/wz/workspace/IDE.log'.
+20:18:24 INFO  : Launching XSCT server: xsct -n  -interactive /home/cnic/wz/workspace/temp_xsdb_launch_script.tcl
+20:18:25 INFO  : Platform repository initialization has completed.
+20:18:26 INFO  : XSCT server has started successfully.
+20:18:26 INFO  : plnx-install-location is set to ''
+20:18:26 INFO  : Successfully done setting XSCT server connection channel  
+20:18:26 INFO  : Successfully done setting workspace for the tool. 
+20:18:26 INFO  : Successfully done query RDI_DATADIR 
+20:18:26 INFO  : Registering command handlers for Vitis TCF services
+10:43:30 DEBUG : Logs will be stored at '/home/cnic/wz/workspace/IDE.log'.
+10:43:31 INFO  : Launching XSCT server: xsct -n  -interactive /home/cnic/wz/workspace/temp_xsdb_launch_script.tcl
+10:43:32 INFO  : XSCT server has started successfully.
+10:43:32 INFO  : plnx-install-location is set to ''
+10:43:32 INFO  : Successfully done setting XSCT server connection channel  
+10:43:32 INFO  : Successfully done query RDI_DATADIR 
+10:43:32 INFO  : Successfully done setting workspace for the tool. 
+10:43:32 INFO  : Platform repository initialization has completed.
+10:43:32 INFO  : Registering command handlers for Vitis TCF services
+14:57:50 INFO  : Build configuration of 'multi_scoring_system' is updated to 'Hardware'
+14:57:50 INFO  : Build configuration of system project is automatically updated to 'Hardware'.
+14:57:50 INFO  : Build configuration of 'multi_scoring_system_hw_link' is updated to 'Hardware'
+14:57:50 INFO  : Build configuration of 'multi_scoring' is updated to 'Hardware'
+14:57:51 INFO  : Build configuration of 'multi_scoring_system' is updated to 'Emulation-HW'
+14:57:51 INFO  : Build configuration of system project is automatically updated to 'Emulation-HW'.
+14:57:51 INFO  : Build configuration of 'multi_scoring_system_hw_link' is updated to 'Emulation-HW'
+14:57:51 INFO  : Build configuration of 'multi_scoring' is updated to 'Emulation-HW'
+14:57:52 INFO  : Build configuration of 'multi_scoring_system' is updated to 'Emulation-SW'
+14:57:52 INFO  : Build configuration of system project is automatically updated to 'Emulation-SW'.
+14:57:52 INFO  : Build configuration of 'multi_scoring_system_hw_link' is updated to 'Emulation-SW'
+14:57:52 INFO  : Build configuration of 'multi_scoring' is updated to 'Emulation-SW'
+14:58:40 INFO  : Added binary container 'binary_container_1' in project 'multi_scoring_system_hw_link'
+14:58:40 INFO  : Added kernel '[krnl_scoring - multi_scoring_kernels/src/krnl_scoring_unit.cpp]' in binary container 'binary_container_1' of project 'multi_scoring_system_hw_link'
+18:52:00 ERROR : Failed to run the application using 'SystemDebugger_multi_scoring_system_multi_scoring'.
+18:55:02 INFO  : Build configuration of 'multi_scoring_system_hw_link' is updated to 'Emulation-HW'
+18:55:02 INFO  : Build configuration of 'multi_scoring_kernels' is updated to 'Emulation-HW'
+18:55:02 INFO  : Build configuration of 'multi_scoring' is updated to 'Emulation-HW'

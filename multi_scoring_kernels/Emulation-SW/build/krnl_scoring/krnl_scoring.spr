@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="krnl_scoring" dir="">
+  <FileSets>
+    <FileSet Name="kernel_krnl_scoring" Type="DesignSrcs">
+      <File Path="/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp"/>
+      <Config/>
+    </FileSet>
+  </FileSets>
+  <Runs/>
+</project>

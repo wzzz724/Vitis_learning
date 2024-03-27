@@ -1,0 +1,31 @@
+---
+MainSourceFile:  /home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/krnl_scoring/krnl_scoring/krnl_scoring/solution/.autopilot/db/krnl_scoring_unit.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_15_1:  '
+    FileOffset:      15
+    FilePath:        /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp
+    Replacements:    
+      - FilePath:        /home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/krnl_scoring/krnl_scoring/krnl_scoring/solution/.autopilot/db/krnl_scoring_unit.pp.0.cpp
+        Offset:          182849
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_15_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_24_1:  '
+    FileOffset:      24
+    FilePath:        /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp
+    Replacements:    
+      - FilePath:        /home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/krnl_scoring/krnl_scoring/krnl_scoring/solution/.autopilot/db/krnl_scoring_unit.pp.0.cpp
+        Offset:          183157
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_24_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_36_1:  '
+    FileOffset:      36
+    FilePath:        /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp
+    Replacements:    
+      - FilePath:        /home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/krnl_scoring/krnl_scoring/krnl_scoring/solution/.autopilot/db/krnl_scoring_unit.pp.0.cpp
+        Offset:          183587
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_36_1: '
+...

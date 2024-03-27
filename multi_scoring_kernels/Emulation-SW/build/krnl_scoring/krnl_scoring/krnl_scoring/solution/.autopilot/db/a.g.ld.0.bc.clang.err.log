@@ -1,0 +1,2 @@
+remark: /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:20:0: Inlining function 'std::sqrt(float)' into 'scoring_cosine(hls::stream<float, 0>&, hls::stream<float, 0>&, hls::stream<float, 0>&, int)'
+remark: /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:34:0: Inlining function 'std::sqrt(float)' into 'scoring_euclidean(hls::stream<float, 0>&, hls::stream<float, 0>&, hls::stream<float, 0>&, int)'

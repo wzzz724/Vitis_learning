@@ -1,0 +1,15 @@
+/home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/krnl_scoring/krnl_scoring/krnl_scoring/solution/.autopilot/db/krnl_scoring_unit.pp.0.cpp:6625:5: warning: Added loop label VITIS_LOOP_15_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < size; i++) {
+    ^~~
+    VITIS_LOOP_15_1: 
+/home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/krnl_scoring/krnl_scoring/krnl_scoring/solution/.autopilot/db/krnl_scoring_unit.pp.0.cpp:6625:5: note: FIX-IT applied suggested code changes
+/home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/krnl_scoring/krnl_scoring/krnl_scoring/solution/.autopilot/db/krnl_scoring_unit.pp.0.cpp:6634:5: warning: Added loop label VITIS_LOOP_24_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < size; i++) {
+    ^~~
+    VITIS_LOOP_24_1: 
+/home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/krnl_scoring/krnl_scoring/krnl_scoring/solution/.autopilot/db/krnl_scoring_unit.pp.0.cpp:6634:5: note: FIX-IT applied suggested code changes
+/home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/krnl_scoring/krnl_scoring/krnl_scoring/solution/.autopilot/db/krnl_scoring_unit.pp.0.cpp:6646:5: warning: Added loop label VITIS_LOOP_36_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < size; i++) {
+    ^~~
+    VITIS_LOOP_36_1: 
+/home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/krnl_scoring/krnl_scoring/krnl_scoring/solution/.autopilot/db/krnl_scoring_unit.pp.0.cpp:6646:5: note: FIX-IT applied suggested code changes

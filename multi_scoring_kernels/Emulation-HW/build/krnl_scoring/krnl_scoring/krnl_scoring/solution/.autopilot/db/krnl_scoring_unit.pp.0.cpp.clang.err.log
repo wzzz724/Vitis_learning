@@ -1,0 +1,25 @@
+/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:14:106: warning: unused parameter 'out_stream' [-Wunused-parameter]
+void scoring_product(hls::stream<float>& in1_stream, hls::stream<float>& in2_stream, hls::stream<float>& out_stream, int size) {
+                                                                                                         ^
+/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:20:105: warning: unused parameter 'out_stream' [-Wunused-parameter]
+void scoring_cosine(hls::stream<float>& in1_stream, hls::stream<float>& in2_stream, hls::stream<float>& out_stream, int size) {
+                                                                                                        ^
+/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:34:108: warning: unused parameter 'out_stream' [-Wunused-parameter]
+void scoring_euclidean(hls::stream<float>& in1_stream, hls::stream<float>& in2_stream, hls::stream<float>& out_stream, int size) {
+                                                                                                           ^
+/home/cnic/wz/workspace/multi_scoring_kernels/Emulation-HW/build/krnl_scoring/krnl_scoring/krnl_scoring.tcl:27:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=krnl_scoring_XLX_SEP_ PragmaOptions=name=krnl_scoring_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE TOP name=krnl_scoring
+        ^
+/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:46:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=krnl_scoring_XLX_SEP_ PragmaOptions=m_axi port = in1 bundle = gmem0_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port = in1 bundle = gmem0
+        ^
+/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:47:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=krnl_scoring_XLX_SEP_ PragmaOptions=m_axi port = in2 bundle = gmem1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port = in2 bundle = gmem1
+        ^
+/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:48:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=krnl_scoring_XLX_SEP_ PragmaOptions=m_axi port = out bundle = gmem0_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port = out bundle = gmem0
+        ^
+/home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:53:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=dataflow_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=krnl_scoring_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS DATAFLOW
+        ^
+8 warnings generated.

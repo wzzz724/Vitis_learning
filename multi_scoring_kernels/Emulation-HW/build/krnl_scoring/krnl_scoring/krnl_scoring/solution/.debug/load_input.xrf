@@ -1,0 +1,22 @@
+Begin Function 'load_input'
+
+RTL state condition: (1'b1 == ap_CS_fsm_state1)
+# ST_1
+local empty_32 <select_9> <integer> <> 'select' </home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:9>
+empty_32 /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:9
+empty_32 /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:7
+reg: empty_32_reg_140[30:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state2)
+# ST_2
+local trunc_ln9 <partselect_9> <integer> <> 'partselect' </home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:9>
+trunc_ln9 /home/cnic/wz/workspace/multi_scoring_kernels/src/krnl_scoring_unit.cpp:9
+reg: trunc_ln9_reg_145[61:0] lv
+
+
+RTL state condition: (1'b1 == ap_CS_fsm_state73)
+# ST_73
+
+End Function 'load_input'
+
